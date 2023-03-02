@@ -17,7 +17,7 @@ namespace TrabajoPracticoN1
             MenuApp.Menu();
             int opcion;
 
-            //StackOverflow
+            //StackOverflow.
             while (!int.TryParse(Console.ReadLine(), out opcion) || opcion > 2 || opcion == 0)
             {
                 Console.WriteLine("Opcion no valida.");
