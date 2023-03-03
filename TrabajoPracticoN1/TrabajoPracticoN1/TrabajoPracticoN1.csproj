@@ -48,6 +48,7 @@
     <Compile Include="Clases\Taxi.cs" />
     <Compile Include="Clases\TransportePublico.cs" />
     <Compile Include="Menus\MenuApp.cs" />
+    <Compile Include="Menus\MenuFinPrograma.cs" />
     <Compile Include="Menus\MenuUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

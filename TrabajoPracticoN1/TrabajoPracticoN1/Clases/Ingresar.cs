@@ -14,8 +14,7 @@ namespace TrabajoPracticoN1.Clases
 
             Console.WriteLine("Solo puede ingresar 5 Omnibus.");
             Console.WriteLine("Ingrese Omnibus: ");
-
-            int cantidadOmnibus = ValidarEntradas.Validar("Solo se puede ingresar numero.");
+            int cantidadOmnibus = ValidarEntradas.Validar("Ingrese solo numeros");
 
             while (cantidadOmnibus > 5)
             {
@@ -24,33 +23,49 @@ namespace TrabajoPracticoN1.Clases
                 cantidadOmnibus = int.Parse(Console.ReadLine());
             }
 
-                for (int i = 1; i <= cantidadOmnibus; i++)
-                {
-                    Console.WriteLine($"Cargue pasajeros del Omnibus {i}: ");
-                    listaOmnibus.Add(omnibus.Pasajeros = ValidarEntradas.Validar("Solo se puede ingresar numero."));
-                }
+            for (int i = 1; i <= cantidadOmnibus; i++)
+            {
+                Console.WriteLine($"Cargue pasajeros del Omnibus {i}: ");
+                listaOmnibus.Add(omnibus.Pasajeros = ValidarEntradas.Validar("Solo se puede ingresar numero."));
+            }
 
-                Console.WriteLine("¿Quiere cargar Taxis? - presione 1 para confirmar");
-                Console.WriteLine("Si ya cargo Omnibus presione 2 para NO .");
-                int opTaxis = int.Parse(Console.ReadLine());
+            Console.WriteLine("¿Quiere cargar Taxis? - presione 1 para confirmar");
+            Console.WriteLine("Presione 2 para listar.");
 
+            var bandera = 0;
+            while (bandera == 0)
+            {
+                var opTaxis = int.Parse(Console.ReadLine());
                 switch (opTaxis)
                 {
                     case 1:
                         Ingresar.IngresarTaxis();
-                    foreach (int list in listaOmnibus)
-                    {
-                        Console.WriteLine($"Omnibus {contadorOmnibus++}: tiene {list} pasajeros.");
-                    }
-                    break;
+                        foreach (int list in listaOmnibus)
+                        {
+                            Console.WriteLine($"Omnibus {contadorOmnibus++}: tiene {list} pasajeros.");
+                        }
+                        omnibus.Avanzar();
+                        bandera = 1;
+                        break;
 
-                case 2:
-                    foreach (int list in listaOmnibus)
-                    {
-                        Console.WriteLine($"Omnibus {contadorOmnibus++}: tiene {list} pasajeros.");
-                    }
-                    break;
+                    case 2:
+                        foreach (int list in listaOmnibus)
+                        {
+                            Console.WriteLine($"Omnibus {contadorOmnibus++}: tiene {list} pasajeros.");
+                        }
+                        omnibus.Avanzar();
+                        bandera = 1;
+                        break;
+
+                    default:
+                        Console.WriteLine("Opcion no valida presione una tecla para continuar.");
+                        Console.ReadLine();
+                        Console.Clear();
+                        Console.WriteLine("¿Quiere cargar Taxis? - presione 1 para confirmar");
+                        Console.WriteLine("Presione 2 para listar.");
+                        break;
                 }
+            }
         }
 
         public static void IngresarTaxis()
@@ -61,8 +76,7 @@ namespace TrabajoPracticoN1.Clases
 
             Console.WriteLine("Solo puede ingresar 5 Taxis.");
             Console.WriteLine("Ingrese Taxis: ");
-
-            int cantidadTaxis = ValidarEntradas.Validar("Solo se puede ingresar numero.");
+            int cantidadTaxis = ValidarEntradas.Validar("Solo se puede ingresar numeros.");
 
             while (cantidadTaxis > 5)
             {
@@ -71,34 +85,55 @@ namespace TrabajoPracticoN1.Clases
                 cantidadTaxis = int.Parse(Console.ReadLine());
             }
 
-                for (int i = 1; i <= cantidadTaxis; i++)
-                {
-                    Console.WriteLine($"Cargue pasajeros del Taxis {i}: ");
-                    listaTaxis.Add(taxis.Pasajeros = ValidarEntradas.Validar("Solo se puede ingresar numero."));
-                }
+            for (int i = 1; i <= cantidadTaxis; i++)
+            {
+                Console.WriteLine($"Cargue pasajeros del Taxis {i}: ");
+                listaTaxis.Add(taxis.Pasajeros = ValidarEntradas.Validar("Solo se puede ingresar numero."));
+            }
 
-                Console.WriteLine("¿Quiere cargar Omnibus? - presione 1 para confirmar");
-                Console.WriteLine("Si ya cargo Omnibus presione 2 para no .");
-                int opOmnibu = int.Parse(Console.ReadLine());
+            Console.WriteLine("¿Quiere cargar Omnibus? - presione 1 para confirmar");
+            Console.WriteLine("Presione 2 para listar.");
+
+            var bandera = 0;
+            while (bandera == 0)
+            {
+
+                var opOmnibu = int.Parse(Console.ReadLine());
 
                 switch (opOmnibu)
+
                 {
                     case 1:
+
                         Ingresar.IngresarOmnibus();
-                    foreach (int list in listaTaxis)
-                    {
+                        foreach (int list in listaTaxis)
+                        {
+                            Console.WriteLine($"Taxi {contadorTaxis++}: tiene {list} pasajeros.");
+                        }
+                        taxis.Avanzar();
+                        bandera = 1;
+                        break;
 
-                        Console.WriteLine($"Taxi {contadorTaxis++}: tiene {list} pasajeros.");
-                    }
-                    break;
+                    case 2:
 
-                case 2:
-                    foreach (int list in listaTaxis)
-                    {
-                        Console.WriteLine($"Taxi {contadorTaxis++}: tiene {list} pasajeros.");
-                    }
-                    break;
+                        foreach (int list in listaTaxis)
+                        {
+                            Console.WriteLine($"Taxi {contadorTaxis++}: tiene {list} pasajeros.");
+                        }
+                        taxis.Avanzar();
+                        bandera = 1;
+                        break;
+
+                    default:
+                        Console.WriteLine("Opcion no valida presione una tecla para continuar.");
+                        Console.ReadLine();
+                        Console.Clear();
+                        Console.WriteLine("¿Quiere cargar Omnibus? - presione 1 para confirmar");
+                        Console.WriteLine("Presione 2 para listar.");
+                        break;
                 }
+            }
+
         }
     }
 }

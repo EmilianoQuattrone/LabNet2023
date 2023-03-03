@@ -6,7 +6,7 @@ namespace TrabajoPracticoN1.Clases
     {
         public override void Avanzar()
         {
-            Console.WriteLine("Taxi avanza");
+            Console.WriteLine("Todos los Taxis cargados avanzan");
         }
 
         public override void Detenerse()

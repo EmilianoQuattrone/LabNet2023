@@ -6,7 +6,7 @@ namespace TrabajoPracticoN1.Clases
     {
         public override void Avanzar()
         {
-            Console.WriteLine("Omnibus avanza");
+            Console.WriteLine("Todos los Omnibus cargados avanzan");
         }
 
         public override void Detenerse()
