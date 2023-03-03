@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TrabajoPracticoN1.Clases;
 using TrabajoPracticoN1.Validaciones;
 
 namespace TrabajoPracticoN1.Clases
@@ -20,7 +21,7 @@ namespace TrabajoPracticoN1.Clases
             {
                 Console.WriteLine("Cantidad Maxima permitida es 5.");
                 Console.WriteLine("Intente de nuevo");
-                cantidadOmnibus = int.Parse(Console.ReadLine());
+                cantidadOmnibus = ValidarEntradas.Validar("Solo se puede ingresar numeros.");
             }
 
             for (int i = 1; i <= cantidadOmnibus; i++)
@@ -82,7 +83,7 @@ namespace TrabajoPracticoN1.Clases
             {
                 Console.WriteLine("Cantidad Maxima permitida es 5.");
                 Console.WriteLine("Intente de nuevo");
-                cantidadTaxis = int.Parse(Console.ReadLine());
+                cantidadTaxis = ValidarEntradas.Validar("Solo se puede ingresar numeros.");
             }
 
             for (int i = 1; i <= cantidadTaxis; i++)
