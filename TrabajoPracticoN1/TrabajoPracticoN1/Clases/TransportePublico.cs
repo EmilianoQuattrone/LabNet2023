@@ -1,5 +1,4 @@
-﻿
-namespace TrabajoPracticoN1.Clases
+﻿namespace TrabajoPracticoN1.Clases
 {
     public abstract class TransportePublico
     {

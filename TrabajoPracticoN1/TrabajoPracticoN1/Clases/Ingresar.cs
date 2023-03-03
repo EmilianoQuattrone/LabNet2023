@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using TrabajoPracticoN1.Clases;
 using TrabajoPracticoN1.Validaciones;
 
 namespace TrabajoPracticoN1.Clases
@@ -37,9 +36,11 @@ namespace TrabajoPracticoN1.Clases
             while (bandera == 0)
             {
                 var opTaxis = Console.ReadLine();
+
                 switch (opTaxis)
                 {
                     case "1":
+
                         Ingresar.IngresarTaxis();
                         foreach (int list in listaOmnibus)
                         {
@@ -50,6 +51,7 @@ namespace TrabajoPracticoN1.Clases
                         break;
 
                     case "2":
+
                         foreach (int list in listaOmnibus)
                         {
                             Console.WriteLine($"Omnibus {contadorOmnibus++}: tiene {list} pasajeros.");
@@ -102,7 +104,6 @@ namespace TrabajoPracticoN1.Clases
                 var opOmnibu = Console.ReadLine();
 
                 switch (opOmnibu)
-
                 {
                     case "1":
 
@@ -134,7 +135,6 @@ namespace TrabajoPracticoN1.Clases
                         break;
                 }
             }
-
         }
     }
 }
