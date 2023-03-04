@@ -4,6 +4,7 @@ namespace TrabajoPracticoN1.Clases
 {
     public class Taxi : TransportePublico
     {
+      
         public override void Avanzar()
         {
             Console.WriteLine("Todos los Taxis cargados avanzan");

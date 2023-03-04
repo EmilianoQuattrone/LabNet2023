@@ -11,14 +11,14 @@ namespace TrabajoPracticoN1.Validaciones
             Console.WriteLine(mensaje);
             string validarNumero = Console.ReadLine();
 
-            while (!int.TryParse(validarNumero, out valor))
+            while (!int.TryParse(validarNumero, out valor) )
 
             {
                 Console.WriteLine(mensaje);
                 validarNumero = Console.ReadLine();
             }
 
-            return valor;
+             return valor;
         }
     }
 }

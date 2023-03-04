@@ -43,15 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Ingresar.cs" />
     <Compile Include="Clases\Omnibus.cs" />
+    <Compile Include="Clases\ServicioOmnibus.cs" />
+    <Compile Include="Clases\ServicioTaxi.cs" />
     <Compile Include="Clases\Taxi.cs" />
     <Compile Include="Clases\TransportePublico.cs" />
+    <Compile Include="Clases\Transportes.cs" />
     <Compile Include="Menus\MenuApp.cs" />
     <Compile Include="Menus\MenuFinPrograma.cs" />
-    <Compile Include="Menus\MenuUsuario.cs" />
+    <Compile Include="Menus\MenuPrograma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones\OtrasValidaciones.cs" />
     <Compile Include="Validaciones\ValidarEntradas.cs" />
   </ItemGroup>
   <ItemGroup>
