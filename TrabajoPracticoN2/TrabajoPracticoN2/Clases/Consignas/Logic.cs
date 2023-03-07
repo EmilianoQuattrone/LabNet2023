@@ -25,14 +25,12 @@ namespace TrabajoPracticoN2.Clases.Consignas
             {
                 Mensajes.MensajeEjercicioN3(ex.Message);
                 Mensajes.MensajeTipo(ex);
-                throw ex;
             }
 
             catch (Exception ex) 
             {
                 Mensajes.MensajeEjercicioN3(ex.Message);
                 Mensajes.MensajeTipo(ex);
-                throw;
             }
         }
 
@@ -46,7 +44,6 @@ namespace TrabajoPracticoN2.Clases.Consignas
             {
                 Mensajes.MensajeEjercicioN4(ex.Message);
                 Mensajes.MensajeTipoEJ4(ex);
-                throw;
             }
         }
     }

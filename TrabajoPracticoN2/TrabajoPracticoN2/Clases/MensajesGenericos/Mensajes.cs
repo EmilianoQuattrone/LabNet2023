@@ -24,8 +24,7 @@ namespace TrabajoPracticoN2.Clases
 
         public static void MensajeDivisionEn0(string mensaje)
         {
-            string mensajeChuckNorris = "Solo Chuck Norris divide por cero!";
-            Console.WriteLine($"{mensaje} {mensajeChuckNorris}");
+            Console.WriteLine($"{mensaje}");
         }
 
         public static void MensajeFinally()
