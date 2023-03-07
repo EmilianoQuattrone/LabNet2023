@@ -57,5 +57,34 @@ namespace TrabajoPracticoN2.Clases
         {
             Console.WriteLine($"El resultado de la division es: {resultado}");
         }
+
+        public static void TituloEjercicioN3()
+        {
+            Console.WriteLine("EJERCICIO 3: ");
+        }
+
+        public static void TituloEjercicioN4()
+        {
+            Console.WriteLine("EJERCICIO 4: ");
+        }
+        public static void MensajeEjercicioN3(string mensaje)
+        {
+            Console.WriteLine($"Mensaje de la Excepcion Original: {mensaje}");
+        }
+
+        public  static void MensajeTipo(Exception ex)
+        {
+            Console.WriteLine($"Tipo de excepcion: {ex.GetType()}");
+        }
+
+        public static void MensajeEjercicioN4(string mensaje)
+        {
+            Console.WriteLine($"Mensaje de la Excepcion Original: {mensaje}");
+        }
+
+        public static void MensajeTipoEJ4(Exception ex)
+        {
+            Console.WriteLine($"Tipo de excepcion: {ex.GetType()}");
+        }
     }
 }

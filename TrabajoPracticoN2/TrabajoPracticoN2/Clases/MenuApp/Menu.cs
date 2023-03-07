@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrabajoPracticoN2.Clases.Consignas;
 using TrabajoPracticoN2.Validaciones;
 
 namespace TrabajoPracticoN2.Clases
@@ -26,8 +27,12 @@ namespace TrabajoPracticoN2.Clases
                     Ejercicios.EjercicioN2(dividendo, divisor);
                     break;
                 case 3:
+                    Mensajes.TituloEjercicioN3();
+                    Logic.Capturar();
                     break;
                 case 4:
+                    Mensajes.TituloEjercicioN4();
+                    Logic.CapturarExcepcionPersonalizada();
                     break;
                 default:
                     Mensajes.MensajeDefault();
