@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TrabajoPracticoN2.Clases.Consignas
 {
@@ -15,8 +11,8 @@ namespace TrabajoPracticoN2.Clases.Consignas
 
         public static void LanzarExcepcionPersonalizada()
         {
-            string mensajePersonal = "Mensaje excepcion personal";
-            throw new ExcepcionesPersonalizadas(mensajePersonal);
+             string mensajePersonal = "Mensaje excepcion personal";
+             throw new ExcepcionesPersonalizadas(mensajePersonal);
         }
 
         public static void Capturar()
@@ -25,10 +21,18 @@ namespace TrabajoPracticoN2.Clases.Consignas
             {
                 LanzarExcepcion();
             }
-            catch (Exception ex)
+            catch (DivideByZeroException ex)
             {
                 Mensajes.MensajeEjercicioN3(ex.Message);
                 Mensajes.MensajeTipo(ex);
+                throw ex;
+            }
+
+            catch (Exception ex) 
+            {
+                Mensajes.MensajeEjercicioN3(ex.Message);
+                Mensajes.MensajeTipo(ex);
+                throw;
             }
         }
 
@@ -42,6 +46,7 @@ namespace TrabajoPracticoN2.Clases.Consignas
             {
                 Mensajes.MensajeEjercicioN4(ex.Message);
                 Mensajes.MensajeTipoEJ4(ex);
+                throw;
             }
         }
     }

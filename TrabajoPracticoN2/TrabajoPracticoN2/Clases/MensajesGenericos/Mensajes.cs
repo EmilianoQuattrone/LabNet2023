@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrabajoPracticoN2.Validaciones;
 
 namespace TrabajoPracticoN2.Clases
 {
