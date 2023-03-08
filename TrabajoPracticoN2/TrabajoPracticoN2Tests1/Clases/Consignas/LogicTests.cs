@@ -12,12 +12,14 @@ namespace TrabajoPracticoN2.Clases.Consignas.Tests
     public class LogicTests
     {
         [TestMethod()]
+        [ExpectedException(typeof(FormatException))]
         public void LanzarExcepcionTest()
         {
             Logic.LanzarExcepcion();
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(Exception))]
         public void LanzarExcepcionPersonalizadaTest()
         {
             Logic.LanzarExcepcionPersonalizada();
