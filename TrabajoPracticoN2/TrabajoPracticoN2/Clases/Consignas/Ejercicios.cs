@@ -8,21 +8,22 @@ namespace TrabajoPracticoN2.Clases
     {
         public static void EjercicioN1(decimal numero)
         {
-			try
-			{
-				Operaciones.DivisionEJN1(numero);
-			}
-			catch (DivideByZeroException ex)
-			{
-				Mensajes.MensajeDivisionEn0(ex.Message);
-			}
-            finally
-			{
-				Mensajes.MensajeFinally();
-                Mensajes.VolverAIntentarlo();
-                decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
-                Intentos.VolverAIntentarlo(probarDeNuevo);
+            try
+            {
+                Operaciones.DivisionEJN1(numero);
             }
+            catch (DivideByZeroException ex)
+            {
+                Mensajes.MensajeDivisionEn0(ex.Message);
+            }
+            finally
+            {
+                Mensajes.MensajeFinally();
+            }
+
+            Mensajes.VolverAIntentarlo();
+            decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+            Intentos.VolverAIntentarlo(probarDeNuevo);
         }
 
 		public static void EjercicioN2(decimal dividendo, decimal divisor)
@@ -37,11 +38,12 @@ namespace TrabajoPracticoN2.Clases
             }
             finally
             {
-                Mensajes.MensajeFinally();
-                Mensajes.VolverAIntentarlo();
-                decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
-                Intentos.VolverAIntentarlo(probarDeNuevo);
+                Mensajes.MensajeFinally();          
             }
+
+            Mensajes.VolverAIntentarlo();
+            decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+            Intentos.VolverAIntentarlo(probarDeNuevo);
         }
     }
 }
