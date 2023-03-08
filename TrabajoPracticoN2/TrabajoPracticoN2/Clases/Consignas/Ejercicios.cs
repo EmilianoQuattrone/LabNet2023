@@ -19,9 +19,9 @@ namespace TrabajoPracticoN2.Clases
             finally
 			{
 				Mensajes.MensajeFinally();
-				Mensajes.VolverAIntentarlo();
-				decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
-				Intentos.VolverAIntentarlo(probarDeNuevo);
+                Mensajes.VolverAIntentarlo();
+                decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+                Intentos.VolverAIntentarlo(probarDeNuevo);
             }
         }
 
