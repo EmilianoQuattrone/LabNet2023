@@ -1,4 +1,5 @@
 ﻿using System;
+using TrabajoPracticoN2.Validaciones;
 
 namespace TrabajoPracticoN2.Clases.Consignas
 {
@@ -32,6 +33,13 @@ namespace TrabajoPracticoN2.Clases.Consignas
                 Mensajes.MensajeEjercicioN3(ex.Message);
                 Mensajes.MensajeTipo(ex);
             }
+            finally
+            {
+                Mensajes.MensajeFinally();
+                Mensajes.VolverAIntentarlo();
+                decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+                Intentos.VolverAIntentarlo(probarDeNuevo);
+            }
         }
 
         public static void CapturarExcepcionPersonalizada()
@@ -44,6 +52,13 @@ namespace TrabajoPracticoN2.Clases.Consignas
             {
                 Mensajes.MensajeEjercicioN4(ex.Message);
                 Mensajes.MensajeTipoEJ4(ex);
+            }
+            finally
+            {
+                Mensajes.MensajeFinally();
+                Mensajes.VolverAIntentarlo();
+                decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+                Intentos.VolverAIntentarlo(probarDeNuevo);
             }
         }
     }

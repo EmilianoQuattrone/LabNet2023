@@ -9,7 +9,7 @@ namespace TrabajoPracticoN2.Clases
             Console.WriteLine("Presione 1 para ejercicio N-1");
             Console.WriteLine("Presione 2 para ejercicio N-2");
             Console.WriteLine("Presione 3 para ejercicio N-3");
-            Console.WriteLine("Presione 4 para ejercicio N-5");
+            Console.WriteLine("Presione 4 para ejercicio N-4");
         }
 
         public static void MensajeDividendo()
@@ -24,7 +24,8 @@ namespace TrabajoPracticoN2.Clases
 
         public static void MensajeDivisionEn0(string mensaje)
         {
-            Console.WriteLine($"{mensaje}");
+            string mensajeChuck = "Solo Chuck Norris divide por cero!";
+            Console.WriteLine($"{mensaje} {mensajeChuck}");
         }
 
         public static void MensajeFinally()
@@ -79,6 +80,11 @@ namespace TrabajoPracticoN2.Clases
         public static void MensajeTipoEJ4(Exception ex)
         {
             Console.WriteLine($"Tipo de excepcion: {ex.GetType()}");
+        }
+
+        public static void VolverAIntentarlo()
+        {
+            Console.WriteLine("¿Volver a intentarlo?");
         }
     }
 }

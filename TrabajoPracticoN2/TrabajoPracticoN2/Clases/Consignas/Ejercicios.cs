@@ -1,5 +1,6 @@
 ﻿using System;
 using TrabajoPracticoN2.Clases.Consignas;
+using TrabajoPracticoN2.Validaciones;
 
 namespace TrabajoPracticoN2.Clases
 {
@@ -18,7 +19,10 @@ namespace TrabajoPracticoN2.Clases
             finally
 			{
 				Mensajes.MensajeFinally();
-			}
+				Mensajes.VolverAIntentarlo();
+				decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+				Intentos.VolverAIntentarlo(probarDeNuevo);
+            }
         }
 
 		public static void EjercicioN2(decimal dividendo, decimal divisor)
@@ -34,6 +38,9 @@ namespace TrabajoPracticoN2.Clases
             finally
             {
                 Mensajes.MensajeFinally();
+                Mensajes.VolverAIntentarlo();
+                decimal probarDeNuevo = Validar.ValidarEntradasNegativasYVacias("Para volver a intentarlo presione 1");
+                Intentos.VolverAIntentarlo(probarDeNuevo);
             }
         }
     }
