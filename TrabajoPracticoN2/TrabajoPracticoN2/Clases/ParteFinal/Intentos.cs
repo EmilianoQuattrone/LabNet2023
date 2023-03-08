@@ -12,10 +12,6 @@ namespace TrabajoPracticoN2.Clases
                 decimal num = Validar.ValidarEntradasNegativasYVacias("Ingrese solo numeros");
                 Menu.MenuUsuario(num);
             }
-            else
-            {
-                Mensajes.MensajeFinDePrograma();
-            }
         }
     }
 }

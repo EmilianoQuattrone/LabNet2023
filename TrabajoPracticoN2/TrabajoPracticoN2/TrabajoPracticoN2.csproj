@@ -46,10 +46,11 @@
     <Compile Include="Clases\Consignas\ExcepcionesPersonalizadas.cs" />
     <Compile Include="Clases\Consignas\Logic.cs" />
     <Compile Include="Clases\Consignas\Operaciones.cs" />
-    <Compile Include="Clases\Intentos.cs" />
+    <Compile Include="Clases\ParteFinal\Intentos.cs" />
     <Compile Include="Clases\MensajesGenericos\Mensajes.cs" />
     <Compile Include="Clases\MenuApp\Menu.cs" />
     <Compile Include="Clases\Consignas\Ejercicios.cs" />
+    <Compile Include="Clases\ParteFinal\VolverAProbar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validaciones\Validar.cs" />
