@@ -19,5 +19,30 @@ namespace TrabajoPracticoN2.Clases.Consignas.Tests
 
             Operaciones.DivisionEJN1(dividendo);
         }
+
+        [TestMethod()]
+        public void DivisionEJN2Test()
+        {
+            //Arrenge
+            decimal dividendo = 10;
+            decimal divisor = 2;
+            decimal resultadoEsperado = 5;
+
+            //Act
+            decimal resultadoObtenido =  Operaciones.DivisionEJN2(dividendo, divisor);
+
+            //Assert
+            Assert.AreEqual(resultadoObtenido, resultadoEsperado);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void DivisionEJN2NegativoTest()
+        {
+            decimal dividendo = 10;
+            decimal divisor = 0;
+
+            Operaciones.DivisionEJN2(dividendo, divisor);
+        }
     }
 }
