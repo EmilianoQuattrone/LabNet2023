@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Consignas\ExcepcionesPersonalizadas.cs" />
+    <Compile Include="Clases\ExcepcionesPersonales\ExcepcionesPersonalizadas.cs" />
     <Compile Include="Clases\Consignas\Logic.cs" />
     <Compile Include="Clases\Consignas\Operaciones.cs" />
     <Compile Include="Clases\ParteFinal\Intentos.cs" />
