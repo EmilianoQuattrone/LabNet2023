@@ -46,7 +46,7 @@ namespace TrabajoPracticoN2.Clases.Consignas
             {
                 LanzarExcepcionPersonalizada();
             }
-            catch (Exception ex)
+            catch (ExcepcionesPersonalizadas ex)
             {
                 Mensajes.MensajeEjercicioN4(ex.Message);
                 Mensajes.MensajeTipoEJ4(ex);

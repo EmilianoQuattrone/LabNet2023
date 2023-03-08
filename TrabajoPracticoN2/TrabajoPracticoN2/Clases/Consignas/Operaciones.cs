@@ -5,7 +5,8 @@
         public static decimal DivisionEJN1(decimal dividendo)
         {
             decimal division;
-            division = (dividendo / 0);
+            decimal divisor = 0;
+            division = (dividendo / divisor);
             return division;
         }
 
