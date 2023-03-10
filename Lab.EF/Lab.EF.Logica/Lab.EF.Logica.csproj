@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriasLogica.cs" />
-    <Compile Include="EmpleadosLogica.cs" />
+    <Compile Include="Categorias\CategoriasLogica.cs" />
+    <Compile Include="Empleados\EmpleadosLogica.cs" />
+    <Compile Include="Interfaces\ICRUD.cs" />
+    <Compile Include="OtrasClases\NorthwindLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

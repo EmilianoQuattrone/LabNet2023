@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Data
 {
-    public abstract class Northwind : NorthwindContext
+    public abstract class NorthwindLogica
     {
         protected readonly NorthwindContext northwindContext;
 
-        public Northwind()
+        public NorthwindLogica()
         {
             northwindContext = new NorthwindContext();
         }

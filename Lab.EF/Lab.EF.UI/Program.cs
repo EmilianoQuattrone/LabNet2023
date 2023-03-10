@@ -12,23 +12,6 @@ namespace Lab.EF.UI
     {
         static void Main(string[] args)
         {
-            EmpleadosLogica empleadosLogica = new EmpleadosLogica();
-
-            foreach (Employees empleados in  empleadosLogica.ObtenerEmpleados()) 
-            {
-                Console.WriteLine($"Nombre completo: {empleados.FirstName} {empleados.LastName}");
-            }
-
-            Console.WriteLine("Categorias: ");
-
-            CategoriasLogica categoriasLogica = new CategoriasLogica();
-
-            foreach (Categories categorias in categoriasLogica.ObtenerCategorias())
-            {
-                Console.WriteLine($"Categorias: {categorias.CategoryName}");
-            }
-
-            Console.ReadKey();
         }
     }
 }
