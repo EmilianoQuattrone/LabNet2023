@@ -2,10 +2,6 @@
 using Lab.EF.UI.InterfazUsuario;
 using Lab.EF.UI.Validaciones;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab.EF.UI.Menus
 {
@@ -15,9 +11,10 @@ namespace Lab.EF.UI.Menus
         {
             int idCategoria = Validar.ValidarEntradasNegativasYVacias("Esta campo acepta valores numericos");
             MensajesPantalla.MensajeNombreCategoria();
-            string nombreCategoria = Console.ReadLine();
+            string nombreCategoria = IngresarValorSoloLetras(Console.ReadLine());
+            
             MensajesPantalla.MensajeDescripcionCategoria();
-            string descripcionCategoria = Console.ReadLine();
+            string descripcionCategoria = IngresarValorSoloLetras(Console.ReadLine());
 
             Categories categories = new Categories
             {
@@ -27,6 +24,18 @@ namespace Lab.EF.UI.Menus
             };
 
             return categories;
+        }
+
+        public static string IngresarValorSoloLetras(string ingreso)
+        {    
+            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == "") 
+            {
+                MensajesPantalla.MensajeSoloLetras();
+                MensajesPantalla.MensajeNombreCategoria();
+                ingreso = Console.ReadLine();
+            }
+
+            return ingreso;
         }
     }
 }

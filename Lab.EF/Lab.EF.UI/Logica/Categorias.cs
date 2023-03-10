@@ -2,12 +2,7 @@
 using Lab.EF.Logica;
 using Lab.EF.Logica.OtrasFuncionalidades;
 using Lab.EF.UI.InterfazUsuario;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.Validation;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab.EF.UI.Logica
 {

@@ -23,6 +23,7 @@ namespace Lab.EF.Logica
                 CategoriaListaMensaje.ListadoCategorias(item);
             }
         }
+
         public void Add(Categories categoria)
         {
             northwindContext.Categories.Add(categoria);

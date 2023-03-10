@@ -1,12 +1,6 @@
-﻿using Lab.EF.Entidades;
-using Lab.EF.Logica.OtrasFuncionalidades;
+﻿using Lab.EF.Logica.OtrasFuncionalidades;
 using Lab.EF.UI.InterfazUsuario;
 using Lab.EF.UI.Logica;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab.EF.UI.Menus
 {

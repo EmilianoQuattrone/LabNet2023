@@ -1,11 +1,5 @@
-﻿using Lab.EF.Entidades;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.Entity.Validation;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab.EF.UI.InterfazUsuario
 {
@@ -47,7 +41,7 @@ namespace Lab.EF.UI.InterfazUsuario
         }
         public static void MensajeExcepciones(DbEntityValidationException ex)
         {
-            string mensaje = "Cantidad maxima de letras 15..";
+            string mensaje = "El campo nombre acepta un manximo de letras 15..";
             Console.WriteLine($"{ex.Message}. \n{mensaje}");
         }
 
@@ -74,6 +68,11 @@ namespace Lab.EF.UI.InterfazUsuario
         public static void MensajeDescripcionCategoria()
         {
             Console.WriteLine("Descripcion: ");
+        }
+
+        public static void MensajeSoloLetras()
+        {
+            Console.WriteLine("Solo admite letras");
         }
     }
 }
