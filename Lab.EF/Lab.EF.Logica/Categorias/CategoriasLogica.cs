@@ -1,5 +1,7 @@
 ﻿using Lab.EF.Data;
 using Lab.EF.Entidades;
+using Lab.EF.Logica.Categorias;
+using Lab.EF.Logica.Excepciones;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
@@ -14,6 +16,13 @@ namespace Lab.EF.Logica
             return northwindContext.Categories.ToList();
         }
 
+        public void ListarCategorias()
+        {
+            foreach (var item in ObtenerTodos())
+            {
+                CategoriaListaMensaje.ListadoCategorias(item);
+            }
+        }
         public void Add(Categories categoria)
         {
             northwindContext.Categories.Add(categoria);

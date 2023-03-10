@@ -48,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias\CategoriaListaMensaje.cs" />
     <Compile Include="Categorias\CategoriasLogica.cs" />
+    <Compile Include="Empleados\EmpleadoListaMensaje.cs" />
     <Compile Include="Empleados\EmpleadosLogica.cs" />
+    <Compile Include="MensajesPantalla\Mensajes.cs" />
     <Compile Include="Interfaces\ICRUD.cs" />
     <Compile Include="OtrasClases\NorthwindLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,5 +71,6 @@
       <Name>Lab.EF.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

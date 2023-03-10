@@ -1,5 +1,6 @@
 ﻿using Lab.EF.Data;
 using Lab.EF.Entidades;
+using Lab.EF.Logica.Empleados;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,19 +13,23 @@ namespace Lab.EF.Logica
             return northwindContext.Employees.ToList();
         }
 
-        public void Add(Employees entidad)
+        public void ListadoEmpleados()
         {
-            northwindContext.Employees.Add(entidad);
-            northwindContext.SaveChanges();
+            foreach (var item in ObtenerTodos())
+            {
+                EmpleadoListaMensaje.MensajeListaEmpleado(item);
+            }
         }
 
-        public void Modificar(Employees employee)
+        public void Add(Employees entidad)
         {
-            
+        }
+
+        public void Modificar(Employees empleado)
+        {         
         }
         public void Eliminar(int id)
-        {
-        
+        { 
         }
     }
 }

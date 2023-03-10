@@ -50,8 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfazUsuario\MensajesPantalla.cs" />
+    <Compile Include="Logica\Categorias.cs" />
+    <Compile Include="Logica\Empleados.cs" />
+    <Compile Include="Menus\OtrosMenus.cs" />
+    <Compile Include="Menus\MenusPantalla.cs" />
+    <Compile Include="OtrasFuncionalidades\Intentos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones\Validar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
