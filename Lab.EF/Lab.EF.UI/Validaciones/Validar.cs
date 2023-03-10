@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.UI.InterfazUsuario;
+using System;
 
 namespace Lab.EF.UI.Validaciones
 {
@@ -18,6 +19,28 @@ namespace Lab.EF.UI.Validaciones
                 validarNumero = Console.ReadLine();
             }
             return valor;
+        }
+
+        public static string IngresarValorSoloLetras(string ingreso, string nombreMensaje)
+        {
+            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == "")
+            {
+                MensajesPantalla.MensajeSoloLetras();
+
+                switch (nombreMensaje)
+                {
+                    case "Categoria":
+                        MensajesPantalla.MensajeNombreCategoria();
+                        break;
+                    case "Descripcion":
+                        MensajesPantalla.MensajeDescripcionCategoria();
+                        break;
+                }
+
+                ingreso = Console.ReadLine();
+            }
+
+            return ingreso;
         }
     }
 }

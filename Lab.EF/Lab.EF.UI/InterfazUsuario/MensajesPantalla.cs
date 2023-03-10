@@ -64,6 +64,10 @@ namespace Lab.EF.UI.InterfazUsuario
         {
             Console.WriteLine("Nombre de la categoria: ");
         }
+        public static void MensajeDescripcion()
+        {
+            Console.WriteLine("Nombre de la descripcion: ");
+        }
 
         public static void MensajeDescripcionCategoria()
         {
