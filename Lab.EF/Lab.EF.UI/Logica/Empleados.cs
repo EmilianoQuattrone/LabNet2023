@@ -1,11 +1,4 @@
-﻿using Lab.EF.Entidades;
-using Lab.EF.Logica;
-using Lab.EF.UI.InterfazUsuario;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lab.EF.Logica;
 
 namespace Lab.EF.UI.Logica
 {

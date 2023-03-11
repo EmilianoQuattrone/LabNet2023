@@ -1,15 +1,14 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Linq;
 using Lab.EF.Entidades;
+using System.Data.Entity;
 
 namespace Lab.EF.Data
 {
     public partial class NorthwindContext : DbContext
     {
         public NorthwindContext()
-            : base("name=NorthwindConexion") { }
+            : base("name=NorthwindConexion")
+        {
+        }
 
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<CustomerDemographics> CustomerDemographics { get; set; }

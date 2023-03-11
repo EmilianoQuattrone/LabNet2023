@@ -1,10 +1,7 @@
 ﻿using Lab.EF.Entidades;
 using Lab.EF.UI.InterfazUsuario;
-using Lab.EF.UI.Logica;
 using Lab.EF.UI.Validaciones;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 
 namespace Lab.EF.UI.Menus
 {

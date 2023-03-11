@@ -1,10 +1,7 @@
 ﻿using Lab.EF.Data;
 using Lab.EF.Entidades;
 using Lab.EF.Logica.Categorias;
-using Lab.EF.Logica.Excepciones;
-using System;
 using System.Collections.Generic;
-using System.Data.Entity.Validation;
 using System.Linq;
 
 namespace Lab.EF.Logica

@@ -1,10 +1,8 @@
 namespace Lab.EF.Entidades
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class Categories
     {
@@ -26,7 +24,6 @@ namespace Lab.EF.Entidades
 
         [Column(TypeName = "image")]
         public byte[] Picture { get; set; }
-
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Products> Products { get; set; }
