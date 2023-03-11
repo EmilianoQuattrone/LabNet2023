@@ -39,10 +39,15 @@ namespace Lab.EF.UI.InterfazUsuario
         {
             Console.WriteLine("Categorias: ");
         }
-        public static void MensajeExcepciones(DbEntityValidationException ex)
+
+        public static void MensajeCategoriaModificacion()
         {
-            string mensaje = "El campo nombre acepta un manximo de letras 15..";
-            Console.WriteLine($"{ex.Message}. \n{mensaje}");
+            Console.WriteLine("Modificar categoria: ");
+        }
+
+        public static void MensajeCategoriaEliminar()
+        {
+            Console.WriteLine("Eliminar categoria: ");
         }
 
         public static void MensajeIngreseCategoria()
@@ -77,6 +82,17 @@ namespace Lab.EF.UI.InterfazUsuario
         public static void MensajeSoloLetras()
         {
             Console.WriteLine("Solo admite letras");
+        }
+
+        public static void MensajeExcepciones(DbEntityValidationException ex)
+        {
+            string mensaje = "El campo nombre acepta un manximo de letras 15..";
+            Console.WriteLine($"{ex.Message}. \n{mensaje}");
+        }
+
+        public static void MensajeExcepcionesGenerico(Exception ex)
+        {
+            Console.WriteLine($"{ex.Message}");
         }
     }
 }

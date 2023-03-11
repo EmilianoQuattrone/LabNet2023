@@ -23,14 +23,15 @@ namespace Lab.EF.UI.Menus
                     break;
                 case 3:
                     MensajesPantalla.MensajeIngreseCategoria();
-                    MensajesPantalla.MensajeIdCategoria();                   
-                    Categorias.IngresarCategoria(OtrosMenus.MenuCategoria());
+                    Categorias.IngresarCategoria(OtrosMenus.MenuIngresarCategoria());
                     break;
                 case 4:
-
+                    MensajesPantalla.MensajeCategoriaModificacion();
+                    Categorias.ModificarCategoria(OtrosMenus.MenuModificarCategoria());
                     break;
                 case 5:
-
+                    MensajesPantalla.MensajeCategoriaEliminar();
+                    Categorias.EliminarCategoria(OtrosMenus.MenuEliminarCategoria());
                     break;
 
                 default:

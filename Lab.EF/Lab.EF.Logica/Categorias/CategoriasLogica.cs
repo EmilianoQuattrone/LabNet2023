@@ -31,31 +31,18 @@ namespace Lab.EF.Logica
         }
 
         public void Modificar(Categories categorias)
-        {
-            try
-            {
-                var modificarCategoria = northwindContext.Categories.Find(categorias.CategoryID);
-                modificarCategoria.CategoryName = categorias.CategoryName;
-                northwindContext.SaveChanges();
-            }
-            catch (DbEntityValidationException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+        {            
+            var modificarCategoria = northwindContext.Categories.Find(categorias.CategoryID);
+            modificarCategoria.CategoryName = categorias.CategoryName;
+            modificarCategoria.Description = categorias.Description;
+            northwindContext.SaveChanges();          
         }
 
         public void Eliminar(int id)
         {
-            try
-            {
-                var eliminarCategoria = northwindContext.Categories.Find(id);
-                northwindContext.Categories.Remove(eliminarCategoria);
-                northwindContext.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }            
+            var eliminarCategoria = northwindContext.Categories.Find(id);
+            northwindContext.Categories.Remove(eliminarCategoria);
+            northwindContext.SaveChanges();         
         }
     }
 }
