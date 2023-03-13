@@ -1,6 +1,8 @@
-﻿using Lab.EF.UI.OtrasFuncionalidades;
+﻿using Lab.EF.Entidades;
+using Lab.EF.UI.OtrasFuncionalidades;
 using System;
 using System.Data.Entity.Validation;
+using System.Deployment.Internal;
 
 namespace Lab.EF.UI.InterfazUsuario
 {
@@ -47,11 +49,6 @@ namespace Lab.EF.UI.InterfazUsuario
             Console.WriteLine("Categoria guardada.");
         }
 
-        public static void MensajeCategoriaIdNoExiste(NullReferenceException ex) 
-        {
-            string mensaje = "El id no existe";
-            Console.WriteLine($"{mensaje}, {ex.Message}");
-        }
         public static void MensajeDeConfirmacion2()
         {
             Console.WriteLine("Categoria modificada.");

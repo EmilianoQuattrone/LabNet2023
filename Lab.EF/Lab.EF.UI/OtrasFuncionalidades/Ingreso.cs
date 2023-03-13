@@ -13,7 +13,7 @@ namespace Lab.EF.UI.OtrasFuncionalidades
         }
         public static int IngresoUsuarioSoloNumeros()
         {
-            int ingreso = Validar.ValidarEntradasNegativasYVacias("Esta campo acepta valores numericos");
+            int ingreso = Validar.ValidarEntradasNegativasYVacias("Este campo acepta valores numericos");
             return ingreso;
         }
     }
