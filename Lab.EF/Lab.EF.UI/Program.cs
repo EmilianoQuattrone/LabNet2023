@@ -1,5 +1,6 @@
 ﻿using Lab.EF.UI.InterfazUsuario;
 using Lab.EF.UI.Menus;
+using Lab.EF.UI.OtrasFuncionalidades;
 using Lab.EF.UI.Validaciones;
 
 namespace Lab.EF.UI
@@ -9,9 +10,8 @@ namespace Lab.EF.UI
         static void Main(string[] args)
         {
             MensajesPantalla.MenuInicio();
-            int opcion = Validar.ValidarEntradasNegativasYVacias("Aqui solo ingresar numeros");
+            int opcion = Ingreso.IngresoUsuarioSoloNumeros();
             MenusPantalla.MenuPrincipal(opcion);
-            MensajesPantalla.MenuFinPrograma();
         }
     }
 }

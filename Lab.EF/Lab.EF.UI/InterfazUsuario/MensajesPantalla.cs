@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.UI.OtrasFuncionalidades;
+using System;
 using System.Data.Entity.Validation;
 
 namespace Lab.EF.UI.InterfazUsuario
@@ -21,7 +22,7 @@ namespace Lab.EF.UI.InterfazUsuario
         public static void MenuFinPrograma()
         {
             Console.WriteLine("Fin del Programa...");
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         public static void VolverAIntentarlo()
@@ -32,28 +33,51 @@ namespace Lab.EF.UI.InterfazUsuario
 
         public static void MensajeEmpleados()
         {
+            LimpiarPantalla.Limpiar();
             Console.WriteLine("Empleados: ");
         }
 
         public static void MensajeCategorias()
         {
+            LimpiarPantalla.Limpiar();
             Console.WriteLine("Categorias: ");
+        }
+        public static void MensajeDeConfirmacion()
+        {
+            Console.WriteLine("Categoria guardada.");
+        }
+
+        public static void MensajeCategoriaIdNoExiste(NullReferenceException ex) 
+        {
+            string mensaje = "El id no existe";
+            Console.WriteLine($"{mensaje}, {ex.Message}");
+        }
+        public static void MensajeDeConfirmacion2()
+        {
+            Console.WriteLine("Categoria modificada.");
+        }
+
+        public static void MensajeDeConfirmacion3()
+        {
+            Console.WriteLine("Categoria eliminada.");
         }
 
         public static void MensajeCategoriaModificacion()
         {
             Console.WriteLine("Modificar categoria: ");
+            LimpiarPantalla.Limpiar();
         }
 
         public static void MensajeCategoriaEliminar()
         {
             Console.WriteLine("Eliminar categoria: ");
+            LimpiarPantalla.Limpiar();
         }
 
         public static void MensajeIngreseCategoria()
         {
             Console.WriteLine("Ingrese una nueva Categoria: ");
-            Console.WriteLine();
+            LimpiarPantalla.Limpiar();
         }
 
         public static void MensajeIdCategoria()
@@ -83,16 +107,24 @@ namespace Lab.EF.UI.InterfazUsuario
         {
             Console.WriteLine("Solo admite letras");
         }
+        public static void MensajeExcepcionesGenerico(Exception ex)
+        {
+            Console.WriteLine($"{ex.Message}.");
+        }
 
         public static void MensajeExcepciones(DbEntityValidationException ex)
         {
             string mensaje = "El campo nombre acepta un manximo de letras 15..";
-            Console.WriteLine($"{ex.Message}. \n{mensaje}");
+            Console.WriteLine($"{mensaje}");
         }
 
-        public static void MensajeExcepcionesGenerico(Exception ex)
+        public static void MensajeExcepcion3(InvalidOperationException ex)
         {
-            Console.WriteLine($"{ex.Message}");
+            Console.WriteLine("Esta intentado modificar una categoria que no existe.");
+        }
+        public static void MensajeExcepciones2(ArgumentNullException ex)
+        {
+            Console.WriteLine("Esta intetando borrar una categoria que no existe.");
         }
     }
 }

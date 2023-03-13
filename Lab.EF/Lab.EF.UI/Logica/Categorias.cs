@@ -11,8 +11,19 @@ namespace Lab.EF.UI.Logica
     {
         public static void ObtenerCategorias()
         {
-            CategoriasLogica categoriasLogica = new CategoriasLogica();
-            categoriasLogica.ListarCategorias();
+            try
+            {
+                CategoriasLogica categoriasLogica = new CategoriasLogica();
+                categoriasLogica.ListarCategorias();
+            }
+            catch (Exception ex)
+            {
+                MensajesPantalla.MensajeExcepcionesGenerico(ex);
+            }
+            finally
+            {
+                Intentos.VolverAIntentar();
+            }
         }      
 
         public static void IngresarCategoria(Categories categories)
@@ -21,6 +32,7 @@ namespace Lab.EF.UI.Logica
             {
                 CategoriasLogica categoriasLogica = new CategoriasLogica();
                 categoriasLogica.Add(categories);
+                MensajesPantalla.MensajeDeConfirmacion();
             }
             catch (DbEntityValidationException ex)
             {
@@ -28,7 +40,6 @@ namespace Lab.EF.UI.Logica
             }
             finally
             {
-                MensajesPantalla.VolverAIntentarlo();
                 Intentos.VolverAIntentar();
             }
         }
@@ -39,10 +50,19 @@ namespace Lab.EF.UI.Logica
             {
                 CategoriasLogica categoriasLogica = new CategoriasLogica();
                 categoriasLogica.Modificar(categories);
+                MensajesPantalla.MensajeDeConfirmacion2();
             }
             catch (DbEntityValidationException ex)
             {
                 MensajesPantalla.MensajeExcepciones(ex);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MensajesPantalla.MensajeExcepcion3(ex);
+            }
+            finally
+            {
+                Intentos.VolverAIntentar();
             }
         }
 
@@ -52,10 +72,15 @@ namespace Lab.EF.UI.Logica
             {
                 CategoriasLogica categoriasLogica = new CategoriasLogica();
                 categoriasLogica.Eliminar(id);
+                MensajesPantalla.MensajeDeConfirmacion3();
             }
-            catch (Exception ex)
+            catch (ArgumentNullException ex)
             {
-                MensajesPantalla.MensajeExcepcionesGenerico(ex);
+                MensajesPantalla.MensajeExcepciones2(ex);
+            }
+            finally
+            {
+                Intentos.VolverAIntentar();
             }
         }
     }

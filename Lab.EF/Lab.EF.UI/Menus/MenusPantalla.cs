@@ -11,7 +11,7 @@ namespace Lab.EF.UI.Menus
             switch (opcion)
             {
                 case 0:
-
+                    MensajesPantalla.MenuFinPrograma();
                     break;
                 case 1:
                     MensajesPantalla.MensajeEmpleados();
@@ -36,7 +36,6 @@ namespace Lab.EF.UI.Menus
 
                 default:
                     MensajesPantalla.MensajeDefaul();
-                    MensajesPantalla.VolverAIntentarlo();
                     Intentos.VolverAIntentar();
                     break;
             }

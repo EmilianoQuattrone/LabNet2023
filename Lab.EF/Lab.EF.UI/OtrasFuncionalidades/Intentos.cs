@@ -1,7 +1,7 @@
 ﻿using Lab.EF.UI.InterfazUsuario;
 using Lab.EF.UI.Menus;
+using Lab.EF.UI.OtrasFuncionalidades;
 using Lab.EF.UI.Validaciones;
-using System;
 
 namespace Lab.EF.Logica.OtrasFuncionalidades
 {
@@ -9,11 +9,14 @@ namespace Lab.EF.Logica.OtrasFuncionalidades
     {
         public static void VolverAIntentar()
         {
-            int op = Validar.ValidarEntradasNegativasYVacias("Esta campo acepta valores numericos");
+            Espacios.SaltoLinea();
+            MensajesPantalla.VolverAIntentarlo();
+            int op = Ingreso.IngresoUsuarioSoloNumeros();
             if (op == 1)
             {
+                LimpiarPantalla.Limpiar();
                 MensajesPantalla.MenuInicio();
-                int opMenu = int.Parse(Console.ReadLine());
+                int opMenu = Ingreso.IngresoUsuarioSoloNumeros();
                 MenusPantalla.MenuPrincipal(opMenu);
             }
             else

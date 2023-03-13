@@ -1,5 +1,7 @@
 ﻿using Lab.EF.Entidades;
+using Lab.EF.Logica.OtrasFuncionalidades;
 using Lab.EF.UI.InterfazUsuario;
+using Lab.EF.UI.OtrasFuncionalidades;
 using Lab.EF.UI.Validaciones;
 using System;
 
@@ -9,17 +11,15 @@ namespace Lab.EF.UI.Menus
     {
         public static Categories MenuIngresarCategoria()
         {
-            MensajesPantalla.MensajeIdCategoria();
-            int idCategoria = Validar.ValidarEntradasNegativasYVacias("Esta campo acepta valores numericos");
+
             MensajesPantalla.MensajeNombreCategoria();
-            string nombreCategoria = Validar.IngresarValorSoloLetras(Console.ReadLine(), "Categoria");
+            string nombreCategoria = Validar.IngresarValorSoloLetras(Ingreso.IngresoUsuario(), "Categoria");
 
             MensajesPantalla.MensajeDescripcionCategoria();
-            string descripcionCategoria = Validar.IngresarValorSoloLetras(Console.ReadLine(), "Descripcion");
+            string descripcionCategoria = Validar.IngresarValorSoloLetras(Ingreso.IngresoUsuario(), "Descripcion");
 
             Categories categories = new Categories
             {
-                CategoryID = idCategoria,
                 CategoryName = nombreCategoria,
                 Description = descripcionCategoria
             };
@@ -30,28 +30,28 @@ namespace Lab.EF.UI.Menus
         public static Categories MenuModificarCategoria()
         {
             MensajesPantalla.MensajeIdCategoria();
-            int idCategoria = Validar.ValidarEntradasNegativasYVacias("Esta campo acepta valores numericos");
+            int idCategoria = Ingreso.IngresoUsuarioSoloNumeros();
 
             MensajesPantalla.MensajeNombreCategoria();
-            string nombreCategoria = Validar.IngresarValorSoloLetras(Console.ReadLine(), "Categoria");
+            string nombreCategoria = Validar.IngresarValorSoloLetras(Ingreso.IngresoUsuario(), "Categoria");
 
             MensajesPantalla.MensajeDescripcionCategoria();
-            string descripcionCategoria = Validar.IngresarValorSoloLetras(Console.ReadLine(), "Descripcion");
+            string descripcionCategoria = Validar.IngresarValorSoloLetras(Ingreso.IngresoUsuario(), "Descripcion");
 
-            Categories categories = new Categories
+            Categories categoriesModificar = new Categories
             {
                 CategoryID = idCategoria,
                 CategoryName = nombreCategoria,
                 Description = descripcionCategoria
             };
 
-            return categories;
+            return categoriesModificar;
         }
 
         public static int MenuEliminarCategoria()
         {
             MensajesPantalla.MensajeIdCategoria();
-            int idCategoria = Validar.ValidarEntradasNegativasYVacias("Esta campo acepta valores numericos");
+            int idCategoria = Ingreso.IngresoUsuarioSoloNumeros();
             return idCategoria;
         }
     }

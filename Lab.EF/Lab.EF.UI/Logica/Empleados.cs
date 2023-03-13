@@ -1,4 +1,7 @@
 ﻿using Lab.EF.Logica;
+using Lab.EF.Logica.OtrasFuncionalidades;
+using Lab.EF.UI.InterfazUsuario;
+using System;
 
 namespace Lab.EF.UI.Logica
 {
@@ -6,8 +9,19 @@ namespace Lab.EF.UI.Logica
     {
         public static void ObtenerEmpleados()
         {
-            EmpleadosLogica empleadosLogica = new EmpleadosLogica();
-            empleadosLogica.ListadoEmpleados();
+            try
+            {
+                EmpleadosLogica empleadosLogica = new EmpleadosLogica();
+                empleadosLogica.ListadoEmpleados();
+            }
+            catch (Exception ex)
+            {
+                MensajesPantalla.MensajeExcepcionesGenerico(ex);
+            }
+            finally
+            {
+                Intentos.VolverAIntentar();
+            }
         }
     }
 }

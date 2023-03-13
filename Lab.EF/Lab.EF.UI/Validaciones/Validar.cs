@@ -1,4 +1,5 @@
 ﻿using Lab.EF.UI.InterfazUsuario;
+using Lab.EF.UI.OtrasFuncionalidades;
 using System;
 
 namespace Lab.EF.UI.Validaciones
@@ -23,7 +24,9 @@ namespace Lab.EF.UI.Validaciones
 
         public static string IngresarValorSoloLetras(string ingreso, string nombreMensaje)
         {
-            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == "")
+
+            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == ""
+                || ingreso.Contains("-"))
             {
                 MensajesPantalla.MensajeSoloLetras();
 
@@ -37,7 +40,7 @@ namespace Lab.EF.UI.Validaciones
                         break;
                 }
 
-                ingreso = Console.ReadLine();
+                ingreso = Ingreso.IngresoUsuario();
             }
 
             return ingreso;

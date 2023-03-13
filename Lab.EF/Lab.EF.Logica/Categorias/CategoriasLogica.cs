@@ -28,11 +28,12 @@ namespace Lab.EF.Logica
         }
 
         public void Modificar(Categories categorias)
-        {            
-            var modificarCategoria = northwindContext.Categories.Find(categorias.CategoryID);
+        {
+            var modificarCategoria = northwindContext.Categories.First(c => c.CategoryID == categorias.CategoryID);
+            modificarCategoria.CategoryID = categorias.CategoryID;
             modificarCategoria.CategoryName = categorias.CategoryName;
             modificarCategoria.Description = categorias.Description;
-            northwindContext.SaveChanges();          
+            northwindContext.SaveChanges();                    
         }
 
         public void Eliminar(int id)
