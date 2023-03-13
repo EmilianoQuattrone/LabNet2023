@@ -7,7 +7,7 @@ namespace Lab.EF.Logica.Categorias
     {
         public static void ListadoCategorias(Categories item)
         {
-            Console.WriteLine($"Nombre: {item.CategoryName}, Descripcion: {item.Description}");
+            Console.WriteLine($"ID: {item.CategoryID} - Nombre: {item.CategoryName} - Descripcion: {item.Description}");
         }
     }
 }

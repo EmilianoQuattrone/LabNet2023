@@ -24,9 +24,7 @@ namespace Lab.EF.UI.Validaciones
 
         public static string IngresarValorSoloLetras(string ingreso, string nombreMensaje)
         {
-
-            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == ""
-                || ingreso.Contains("-"))
+            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == "")
             {
                 MensajesPantalla.MensajeSoloLetras();
 
