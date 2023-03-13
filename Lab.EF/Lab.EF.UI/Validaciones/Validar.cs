@@ -1,6 +1,7 @@
 ﻿using Lab.EF.UI.InterfazUsuario;
 using Lab.EF.UI.OtrasFuncionalidades;
 using System;
+using System.Text.RegularExpressions;
 
 namespace Lab.EF.UI.Validaciones
 {
@@ -24,7 +25,9 @@ namespace Lab.EF.UI.Validaciones
 
         public static string IngresarValorSoloLetras(string ingreso, string nombreMensaje)
         {
-            while (int.TryParse(ingreso, out int resultado) || ingreso.Trim() == "")
+            Regex regex = new Regex("^[a-zA-Z]*$");
+
+            while (!regex.IsMatch(ingreso) || ingreso.Trim() == "")
             {
                 MensajesPantalla.MensajeSoloLetras();
 

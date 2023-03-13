@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab.EF.UI.OtrasFuncionalidades
 {
@@ -11,6 +7,11 @@ namespace Lab.EF.UI.OtrasFuncionalidades
         public static void Limpiar()
         {
             Console.Clear();
+        }
+
+        public static void SaltoLinea()
+        {
+            Console.WriteLine();
         }
     }
 }

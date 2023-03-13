@@ -1,8 +1,6 @@
-﻿using Lab.EF.Entidades;
-using Lab.EF.UI.OtrasFuncionalidades;
+﻿using Lab.EF.UI.OtrasFuncionalidades;
 using System;
 using System.Data.Entity.Validation;
-using System.Deployment.Internal;
 
 namespace Lab.EF.UI.InterfazUsuario
 {
@@ -11,10 +9,10 @@ namespace Lab.EF.UI.InterfazUsuario
         public static void MenuInicio()
         {
             Console.WriteLine("----Menu Principal----");
-            Console.WriteLine();
+            LimpiarPantalla.SaltoLinea();
             Console.WriteLine("Presione 1 - Listar Empleados");
             Console.WriteLine("Presione 2 - Listar Categorias");
-            Console.WriteLine();
+            LimpiarPantalla.SaltoLinea();
             Console.WriteLine("Presione 3 - Ingresar nueva Categoria");
             Console.WriteLine("Presione 4 - Modificar Categoria");
             Console.WriteLine("Presione 5 - Eliminar Categoria");
