@@ -2,7 +2,7 @@
 
 namespace Lab.EF.Logica
 {
-    internal interface ICRUD<T>
+    public interface ICRUD<T>
     {
         List<T> ObtenerTodos();
         void Add(T entidad);
