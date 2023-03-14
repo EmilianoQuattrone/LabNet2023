@@ -3,11 +3,19 @@ using Lab.EF.Entidades;
 using Lab.EF.Logica.Categorias;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Lab.EF.Logica
 {
     public class CategoriasLogica : NorthwindLogica, ICRUD<Categories>
     {
+        public CategoriasLogica() { }
+
+        public CategoriasLogica(NorthwindContext context) 
+        {
+            northwindContext = context;
+        }
+
         public List<Categories> ObtenerTodos()
         {
             return northwindContext.Categories.ToList();

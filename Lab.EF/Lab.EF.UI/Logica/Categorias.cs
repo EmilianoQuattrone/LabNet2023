@@ -3,6 +3,7 @@ using Lab.EF.Logica;
 using Lab.EF.Logica.OtrasFuncionalidades;
 using Lab.EF.UI.InterfazUsuario;
 using System;
+using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 
 namespace Lab.EF.UI.Logica
@@ -73,6 +74,10 @@ namespace Lab.EF.UI.Logica
                 CategoriasLogica categoriasLogica = new CategoriasLogica();
                 categoriasLogica.Eliminar(id);
                 MensajesPantalla.MensajeDeConfirmacion3();
+            }
+            catch (DbUpdateException)
+            {
+                MensajesPantalla.MensajeExcepcion4();
             }
             catch (ArgumentNullException ex)
             {

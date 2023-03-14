@@ -2,7 +2,7 @@
 {
     public abstract class NorthwindLogica
     {
-        protected readonly NorthwindContext northwindContext;
+        protected NorthwindContext northwindContext;
 
         public NorthwindLogica()
         {
