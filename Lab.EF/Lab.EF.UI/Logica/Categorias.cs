@@ -75,9 +75,9 @@ namespace Lab.EF.UI.Logica
                 categoriasLogica.Eliminar(id);
                 MensajesPantalla.MensajeDeConfirmacion3();
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException ex)
             {
-                MensajesPantalla.MensajeExcepcion4();
+                MensajesPantalla.MensajeExcepcion4(ex);
             }
             catch (ArgumentNullException ex)
             {

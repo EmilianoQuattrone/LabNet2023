@@ -110,22 +110,22 @@ namespace Lab.EF.UI.InterfazUsuario
 
         public static void MensajeExcepciones(DbEntityValidationException ex)
         {
-            string mensaje = "El campo nombre acepta un manximo de letras 15..";
-            Console.WriteLine($"{mensaje}");
+            string mensaje = "El campo nombre acepta un manximo de letras 15.";
+            Console.WriteLine($"{mensaje} \n{ex.Message}");
         }
         public static void MensajeExcepciones2(ArgumentNullException ex)
         {
-            Console.WriteLine("Esta intetando borrar una categoria que no existe.");
+            Console.WriteLine($"Esta intetando borrar una categoria que no existe.\n{ex.Message}");
         }
 
         public static void MensajeExcepcion3(InvalidOperationException ex)
         {
-            Console.WriteLine("Esta intentado modificar una categoria que no existe.");
+            Console.WriteLine($"Esta intentado modificar una categoria que no existe. \n{ex.Message}");
         }
 
-        public static void MensajeExcepcion4()
+        public static void MensajeExcepcion4(DbUpdateException ex)
         {
-            Console.WriteLine("Esta intentado eliminar una categoria no permitida por el admin.");
+            Console.WriteLine($"Esta intentado eliminar una categoria no permitida por el admin. \n{ex.Message}");
         }
     }
 }
