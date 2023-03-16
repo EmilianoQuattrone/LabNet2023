@@ -11,8 +11,8 @@ namespace PracticaLINQ.Logica
         {
             try 
             {
-                CustomerLogica customerLogica = new CustomerLogica();
-                IEnumerable<CustomerDtos> customersLista = customerLogica.ObtenerTodo();
+                CustomerCompleto customerLogica = new CustomerCompleto();
+                var customersLista = customerLogica.ObtenerConsulta();
                 ImprimirCustomer(customersLista);
             }
             catch (Exception ex) 

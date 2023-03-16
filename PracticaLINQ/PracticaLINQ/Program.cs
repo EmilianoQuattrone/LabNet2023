@@ -1,6 +1,7 @@
 ﻿using System;
 using EF.Logica.Productos;
 using PracticaLINQ.Logica;
+using PracticaLINQ.Logica.Cliente;
 using PracticaLINQ.MensajesUI;
 
 namespace PracticaLINQ
@@ -10,8 +11,10 @@ namespace PracticaLINQ
         static void Main(string[] args)
         {
             //CustomersUI.ObtenerCustomers();
-            //ProductsUI.ObtenerPRoductosSinStock();
-            ProductsConStockUI.ObtenerProductosConStock();
+            //ProductsSinStockUI.ObtenerPRoductosSinStock();
+            //ProductsConStockUI.ObtenerProductosConStock();
+            //CustomerPorRegionWAUI.ObtenerCustomerPorRegionWA();
+            CustomerMayusculaMinusculaUI.ObtenerCustomerMayusculaMinuscula();
             Mensajes.FinDePrograma();
         }
     }

@@ -6,14 +6,14 @@ using System.Collections.Generic;
 
 namespace PracticaLINQ.Logica
 {
-    public class ProductsUI
+    public class ProductsSinStockUI
     {
         public static void ObtenerPRoductosSinStock()
         {
 			try
 			{
-                Product product = new Product();
-                IEnumerable<Products> productsLista = product.ObtenerTodo();
+                ProductSinStock product = new ProductSinStock();
+                var productsLista = product.ObtenerConsulta();
                 ImprimirProductoSinStock(productsLista);
 			}
 			catch (Exception ex)

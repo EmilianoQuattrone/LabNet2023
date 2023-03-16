@@ -8,6 +8,6 @@ namespace EF.Logica.Interfaces
 {
     public interface IObtener<T>
     {
-        IEnumerable<T> ObtenerTodo();   
+        IEnumerable<T> ObtenerConsulta();   
     }
 }

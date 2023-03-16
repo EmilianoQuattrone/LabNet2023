@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace EF.Logica.Productos
 {
-    public class Product : IObtener<Products>
+    public class ProductSinStock : IObtener<Products>
     {
-        public IEnumerable<Products> ObtenerTodo()
+        public IEnumerable<Products> ObtenerConsulta()
         {
             using (var context = new NorthwindContext())
             {

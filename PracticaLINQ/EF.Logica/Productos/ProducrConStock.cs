@@ -8,7 +8,7 @@ namespace EF.Logica.Productos
 {
     public class ProducrConStock : IObtener<ProducrConStockDto>
     {
-        public IEnumerable<ProducrConStockDto> ObtenerTodo()
+        public IEnumerable<ProducrConStockDto> ObtenerConsulta()
         {
             using (var context = new NorthwindContext())
             {

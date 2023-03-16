@@ -49,12 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\Northwind.cs" />
-    <Compile Include="Customer\CustomerLogica.cs" />
-    <Compile Include="Customer\CustomerDtos.cs" />
+    <Compile Include="Customer\CustomerCompleto.cs" />
+    <Compile Include="Customer\CustomerMayusculaMinuscula.cs" />
+    <Compile Include="Customer\CustomerPorRegionWA.cs" />
+    <Compile Include="Customer\DTOs\CustomerDtos.cs" />
+    <Compile Include="Customer\DTOs\CustomerMayusculaMinusculaDtos.cs" />
     <Compile Include="Interfaces\IObtener.cs" />
     <Compile Include="Productos\DTOs\ProducrConStockDto.cs" />
     <Compile Include="Productos\ProducrConStock.cs" />
-    <Compile Include="Productos\Product.cs" />
+    <Compile Include="Productos\ProductSinStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

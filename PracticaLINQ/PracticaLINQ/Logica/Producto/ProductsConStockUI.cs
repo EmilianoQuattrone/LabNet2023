@@ -13,7 +13,7 @@ namespace PracticaLINQ.Logica
 			try
 			{
 				ProducrConStock producrConStock = new ProducrConStock();
-				IEnumerable<ProducrConStockDto> productsLista = producrConStock.ObtenerTodo();
+				var productsLista = producrConStock.ObtenerConsulta();
 				ImprimirProductoConStock(productsLista);
 			}
 			catch (Exception ex)

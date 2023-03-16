@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logica\CustomersUI.cs" />
-    <Compile Include="Logica\ProductsConStockUI.cs" />
-    <Compile Include="Logica\ProductsUI.cs" />
+    <Compile Include="Logica\Cliente\CustomerMayusculaMinusculaUI.cs" />
+    <Compile Include="Logica\Cliente\CustomerPorRegionWAUI.cs" />
+    <Compile Include="Logica\Cliente\CustomersUI.cs" />
+    <Compile Include="Logica\Producto\ProductsConStockUI.cs" />
+    <Compile Include="Logica\Producto\ProductsSinStockUI.cs" />
     <Compile Include="MensajesUI\Mensajes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

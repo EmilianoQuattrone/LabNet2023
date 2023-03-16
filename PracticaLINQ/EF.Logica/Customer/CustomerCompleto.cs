@@ -7,9 +7,9 @@ using System.Linq;
 
 namespace EF.Logica.Customer
 {
-    public class CustomerLogica : Northwind, IObtener<CustomerDtos>
+    public class CustomerCompleto : Northwind, IObtener<CustomerDtos>
     {
-        public IEnumerable<CustomerDtos> ObtenerTodo()
+        public IEnumerable<CustomerDtos> ObtenerConsulta()
         {
             using (var context = new NorthwindContext())
 
