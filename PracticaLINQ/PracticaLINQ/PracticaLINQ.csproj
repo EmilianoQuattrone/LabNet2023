@@ -50,7 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logica\Customers.cs" />
+    <Compile Include="Logica\CustomersUI.cs" />
+    <Compile Include="MensajesUI\Mensajes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

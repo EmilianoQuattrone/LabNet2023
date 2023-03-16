@@ -11,7 +11,8 @@ namespace EF.Logica.Customer
     {
         public IEnumerable<CustomerDtos> ObtenerTodo()
         {
-            using (var context = new NorthwindContext()) 
+            using (var context = new NorthwindContext())
+                
             {
                 return context.Customers
                        .Select(c => new CustomerDtos
