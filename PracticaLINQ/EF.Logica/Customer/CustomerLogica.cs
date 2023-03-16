@@ -12,13 +12,13 @@ namespace EF.Logica.Customer
         public IEnumerable<CustomerDtos> ObtenerTodo()
         {
             using (var context = new NorthwindContext())
-                
+
             {
                 return context.Customers
                        .Select(c => new CustomerDtos
                        {
-                          Id = c.CustomerID,
-                          Nombre = c.CompanyName
+                           Id = c.CustomerID,
+                           Nombre = c.CompanyName
                        }).ToList();
             }
         }

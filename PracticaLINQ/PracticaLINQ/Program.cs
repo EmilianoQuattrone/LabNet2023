@@ -1,4 +1,6 @@
-﻿using PracticaLINQ.Logica;
+﻿using System;
+using EF.Logica.Productos;
+using PracticaLINQ.Logica;
 using PracticaLINQ.MensajesUI;
 
 namespace PracticaLINQ
@@ -7,7 +9,8 @@ namespace PracticaLINQ
     {
         static void Main(string[] args)
         {
-            CustomersUI.ObtenerCustomers();
+            //CustomersUI.ObtenerCustomers();
+            ProductsUI.ObtenerPRoductosSinStock();
             Mensajes.FinDePrograma();
         }
     }

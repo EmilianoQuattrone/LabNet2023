@@ -52,6 +52,7 @@
     <Compile Include="Customer\CustomerLogica.cs" />
     <Compile Include="Customer\CustomerDtos.cs" />
     <Compile Include="Interfaces\IObtener.cs" />
+    <Compile Include="Productos\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +65,10 @@
       <Name>EF.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\EF.Entidades\EF.Entidades.csproj">
-      <Project>{8683e010-706d-4bb2-9178-77e5361264c5}</Project>
+      <Project>{8683E010-706D-4BB2-9178-77E5361264C5}</Project>
       <Name>EF.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
