@@ -1,4 +1,5 @@
 ﻿using System;
+using EF.Logica.Customer;
 using EF.Logica.Productos;
 using PracticaLINQ.Logica;
 using PracticaLINQ.Logica.Cliente;
@@ -14,7 +15,8 @@ namespace PracticaLINQ
             //ProductsSinStockUI.ObtenerPRoductosSinStock();
             //ProductsConStockUI.ObtenerProductosConStock();
             //CustomerPorRegionWAUI.ObtenerCustomerPorRegionWA();
-            CustomerMayusculaMinusculaUI.ObtenerCustomerMayusculaMinuscula();
+            //CustomerMayusculaMinusculaUI.ObtenerCustomerMayusculaMinuscula();
+            CustomerOrdersUI.ObtenerCustomerOrders();
             Mensajes.FinDePrograma();
         }
     }

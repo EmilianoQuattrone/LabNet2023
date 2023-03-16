@@ -34,6 +34,11 @@ namespace PracticaLINQ.MensajesUI
             Console.WriteLine($"Nombre en Mayuscula: {cmn.Mayuscula} - Nombre en Miniscula: {cmn.Minuscula}");
         }
 
+        public static void MensajeCustomerOrders(CustomerOrdersDtos co)
+        {
+            Console.WriteLine($"Nombre: {co.NombreCliente} - Region: {co.Region} - Fecha: {co.OrdenFecha}");
+        }
+
         public static void MensajeExcepcion(Exception ex)
         {
             Console.WriteLine($"Error al intentar Obtener los Customer. \n{ex}");

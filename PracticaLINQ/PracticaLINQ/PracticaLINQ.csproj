@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica\Cliente\CustomerMayusculaMinusculaUI.cs" />
+    <Compile Include="Logica\Cliente\CustomerOrdersUI.cs" />
     <Compile Include="Logica\Cliente\CustomerPorRegionWAUI.cs" />
     <Compile Include="Logica\Cliente\CustomersUI.cs" />
     <Compile Include="Logica\Producto\ProductsConStockUI.cs" />
