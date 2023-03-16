@@ -53,9 +53,11 @@
     <Compile Include="Customer\CustomerMayusculaMinuscula.cs" />
     <Compile Include="Customer\CustomerOrders.cs" />
     <Compile Include="Customer\CustomerPorRegionWA.cs" />
+    <Compile Include="Customer\CustomerPrimerosTres.cs" />
     <Compile Include="Customer\DTOs\CustomerDtos.cs" />
     <Compile Include="Customer\DTOs\CustomerMayusculaMinusculaDtos.cs" />
     <Compile Include="Customer\DTOs\CustomerOrdersDtos.cs" />
+    <Compile Include="Customer\DTOs\CustomerPrimerosTresDtos.cs" />
     <Compile Include="Interfaces\IObtener.cs" />
     <Compile Include="Productos\DTOs\ProducrConStockDto.cs" />
     <Compile Include="Productos\Mensaje\ProductMensaje.cs" />

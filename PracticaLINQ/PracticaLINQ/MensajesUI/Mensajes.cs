@@ -24,6 +24,11 @@ namespace PracticaLINQ.MensajesUI
                 $"Unidades Vendidas: {pd.UnidadPrecio}");
         }
 
+        public static void MensajeCustomerPrimerosTres(CustomerPrimerosTresDtos cpt)
+        {
+            Console.WriteLine($"Nombre: {cpt.Nombre} - Region: {cpt.Region}");
+        }
+
         public static void MensajeCustomerConRegionWA(Customers cs)
         {
             Console.WriteLine($"Nombre: {cs.ContactName} - Region: {cs.Region}");

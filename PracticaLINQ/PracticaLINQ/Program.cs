@@ -18,7 +18,8 @@ namespace PracticaLINQ
             //CustomerPorRegionWAUI.ObtenerCustomerPorRegionWA();
             //CustomerMayusculaMinusculaUI.ObtenerCustomerMayusculaMinuscula();
             //CustomerOrdersUI.ObtenerCustomerOrders();
-            ProductPrimerElementoUI.ObtenerProductPrimerElemento();
+            //ProductPrimerElementoUI.ObtenerProductPrimerElemento();
+            CustomerPrimerosTresUI.ObtenerCustomerPrimerosTres();
             Mensajes.FinDePrograma();
         }
     }
