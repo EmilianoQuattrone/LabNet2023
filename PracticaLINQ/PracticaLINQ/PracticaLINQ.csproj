@@ -55,8 +55,10 @@
     <Compile Include="Logica\Cliente\CustomerPorRegionWAUI.cs" />
     <Compile Include="Logica\Cliente\CustomerPrimerosTresUI.cs" />
     <Compile Include="Logica\Cliente\CustomersUI.cs" />
+    <Compile Include="Logica\Producto\ProductOrdenadoProNombreUI.cs" />
     <Compile Include="Logica\Producto\ProductPrimerElementoUI.cs" />
     <Compile Include="Logica\Producto\ProductsConStockUI.cs" />
+    <Compile Include="Logica\Producto\ProductSinStockMayorMenorUI.cs" />
     <Compile Include="Logica\Producto\ProductsSinStockUI.cs" />
     <Compile Include="MensajesUI\Mensajes.cs" />
     <Compile Include="Program.cs" />

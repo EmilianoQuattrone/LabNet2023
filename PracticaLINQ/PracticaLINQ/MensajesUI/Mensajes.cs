@@ -24,6 +24,16 @@ namespace PracticaLINQ.MensajesUI
                 $"Unidades Vendidas: {pd.UnidadPrecio}");
         }
 
+        public static void MensajeProductSinStockMayorMenor(ProductSinStockMayorMenorDtos pmn)
+        {
+            Console.WriteLine($"Nombre productos: {pmn.Nombre} - Sotck: {pmn.Stock}");
+        }
+
+        public static void MensajeObtenerProductOrdenadoProNombre(ProductOrdenadoProNombreDtos pon)
+        {
+            Console.WriteLine($"Nombre producto: {pon.NombreProducto}");
+        }
+
         public static void MensajeCustomerPrimerosTres(CustomerPrimerosTresDtos cpt)
         {
             Console.WriteLine($"Nombre: {cpt.Nombre} - Region: {cpt.Region}");
