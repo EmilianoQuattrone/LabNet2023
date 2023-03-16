@@ -12,17 +12,6 @@ namespace PracticaLINQ
     {
         static void Main(string[] args)
         {
-            //CustomersUI.ObtenerCustomers();
-            //ProductsSinStockUI.ObtenerPRoductosSinStock();
-            //ProductsConStockUI.ObtenerProductosConStock();
-            //CustomerPorRegionWAUI.ObtenerCustomerPorRegionWA();
-            //CustomerMayusculaMinusculaUI.ObtenerCustomerMayusculaMinuscula();
-            //CustomerOrdersUI.ObtenerCustomerOrders();
-            //ProductPrimerElementoUI.ObtenerProductPrimerElemento();
-            //CustomerPrimerosTresUI.ObtenerCustomerPrimerosTres();
-            //ProductOrdenadoProNombreUI.ObtenerProductOrdenadoProNombre();
-            //ProductSinStockMayorMenorUI.ObtenerProductSinStockMayorMenor();
-            ProductCategoriesUI.ObtenerProductCategories();
             Mensajes.FinDePrograma();
         }
     }

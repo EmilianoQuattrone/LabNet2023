@@ -49,11 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\Northwind.cs" />
+    <Compile Include="Customer\CustomerCantidadOrders.cs" />
     <Compile Include="Customer\CustomerCompleto.cs" />
     <Compile Include="Customer\CustomerMayusculaMinuscula.cs" />
     <Compile Include="Customer\CustomerOrders.cs" />
     <Compile Include="Customer\CustomerPorRegionWA.cs" />
     <Compile Include="Customer\CustomerPrimerosTres.cs" />
+    <Compile Include="Customer\DTOs\CustomerCantidadOrdersDto.cs" />
     <Compile Include="Customer\DTOs\CustomerDtos.cs" />
     <Compile Include="Customer\DTOs\CustomerMayusculaMinusculaDtos.cs" />
     <Compile Include="Customer\DTOs\CustomerOrdersDtos.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Productos\ProductCategories.cs" />
     <Compile Include="Productos\ProductOrdenadoProNombre.cs" />
     <Compile Include="Productos\ProductPrimerElemento.cs" />
+    <Compile Include="Productos\ProductPrimero.cs" />
     <Compile Include="Productos\ProductSinStock.cs" />
     <Compile Include="Productos\ProductSinStockMayorMenor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

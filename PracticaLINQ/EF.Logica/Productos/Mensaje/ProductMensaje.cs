@@ -9,6 +9,11 @@ namespace EF.Logica.Productos.Mensaje
         {
             Console.WriteLine($"Nombre: {products.ProductName}");
         }
+        public static void MensajeProdcutoPrimero(Products p)
+        {
+            Console.WriteLine($"Producto: {p.ProductName} - Precio: {p.UnitPrice} - " +
+                $"Stock: {p.UnitsInStock}");
+        }
         public static void MensajeProductNoExite()
         {
             Console.WriteLine("El producto no existe");

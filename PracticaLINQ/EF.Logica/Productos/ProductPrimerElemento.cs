@@ -10,7 +10,7 @@ namespace EF.Logica.Productos
         {
             using (var context = new NorthwindContext())
             {
-                var query =  context.Products.FirstOrDefault(p => p.ProductID == 1);
+                var query =  context.Products.FirstOrDefault(p => p.ProductID == 789);
             
                 if (query != null)
                 {
