@@ -16,7 +16,8 @@ namespace PracticaLINQ.Logica.Cliente
         {
 			try
 			{
-				CustomerMayusculaMinuscula customerMayusculaMinuscula = new CustomerMayusculaMinuscula();
+                Limpiar.LimpiarConsola();
+                CustomerMayusculaMinuscula customerMayusculaMinuscula = new CustomerMayusculaMinuscula();
 				var customerLista = customerMayusculaMinuscula.ObtenerConsulta();
 				ImprimirCustomerMayusculaMinuscula(customerLista);
 			}

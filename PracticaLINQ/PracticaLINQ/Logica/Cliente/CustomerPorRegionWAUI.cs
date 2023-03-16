@@ -16,7 +16,8 @@ namespace PracticaLINQ.Logica
         {
 			try
 			{
-				CustomerPorRegionWA customerPorRegionWA = new CustomerPorRegionWA();
+                Limpiar.LimpiarConsola();
+                CustomerPorRegionWA customerPorRegionWA = new CustomerPorRegionWA();
 				var customersLista = customerPorRegionWA.ObtenerConsulta();
 				ImprimirCustomerConRegionWA(customersLista);
 			}

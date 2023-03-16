@@ -16,6 +16,7 @@ namespace PracticaLINQ.Logica.Cliente
         {
             try
             {
+                Limpiar.LimpiarConsola();
                 CustomerCantidadOrders customerCantidadOrders = new CustomerCantidadOrders();
                 var customerCantidadOrdersLista = customerCantidadOrders.ObtenerConsulta();
                 ImprimirCustomerCantidadOrders(customerCantidadOrdersLista);

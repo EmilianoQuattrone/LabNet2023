@@ -16,6 +16,7 @@ namespace PracticaLINQ.Logica.Producto
         {
 			try
 			{
+                Limpiar.LimpiarConsola();
                 ProductSinStockMayorMenor productSinStockMayorMenor = new ProductSinStockMayorMenor();
                 var productSinStockMayorMenorLista = productSinStockMayorMenor.ObtenerConsulta();
                 ImprimerProductSinStockMayorMenor(productSinStockMayorMenorLista);

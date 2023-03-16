@@ -13,7 +13,8 @@ namespace PracticaLINQ.Logica.Cliente
         {
 			try
 			{
-				CustomerOrders customerOrders = new CustomerOrders();
+                Limpiar.LimpiarConsola();
+                CustomerOrders customerOrders = new CustomerOrders();
 				var customerOrdersLista = customerOrders.ObtenerConsulta();
 				ImprimirCustomerOrders(customerOrdersLista);
             }

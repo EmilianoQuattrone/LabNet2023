@@ -2,6 +2,7 @@
 using EF.Logica.Customer;
 using EF.Logica.Customer.DTOs;
 using EF.Logica.Productos.DTOs;
+using PracticaLINQ.Funcionalidades;
 using System;
 
 namespace PracticaLINQ.MensajesUI
@@ -12,7 +13,7 @@ namespace PracticaLINQ.MensajesUI
         public static void MensajeMenuPantalla()
         {
             Console.WriteLine("----- Menu Principal -----");
-            Console.WriteLine();
+            Espacio.SaltoDeLinea();
             Console.WriteLine("1 - Mostrar todos los cliente.");
             Console.WriteLine("2 - Mostrar productos sin Stock.");
             Console.WriteLine("3 - Mostrar productos con Stock y que cuentas mas de 3 por unidad.");

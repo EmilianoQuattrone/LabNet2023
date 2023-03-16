@@ -12,6 +12,7 @@ namespace PracticaLINQ.Logica
         {
             try 
             {
+                Limpiar.LimpiarConsola();
                 CustomerCompleto customerLogica = new CustomerCompleto();
                 var customersLista = customerLogica.ObtenerConsulta();
                 ImprimirCustomer(customersLista);

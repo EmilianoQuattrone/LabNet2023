@@ -7,6 +7,7 @@ namespace PracticaLINQ.Funcionalidades
     {
         public static void VolverAIntentarlo()
         {
+            Espacio.SaltoDeLinea();
             Mensajes.MensajeVolverAIntentarlo();
             int op = IngresoUsuario.IngresoUsuarioSoloNumeros();
 

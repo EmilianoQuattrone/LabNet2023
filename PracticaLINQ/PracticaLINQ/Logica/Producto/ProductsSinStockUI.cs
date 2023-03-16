@@ -13,6 +13,7 @@ namespace PracticaLINQ.Logica
         {
 			try
 			{
+                Limpiar.LimpiarConsola();
                 ProductSinStock product = new ProductSinStock();
                 var productsLista = product.ObtenerConsulta();
                 ImprimirProductoSinStock(productsLista);

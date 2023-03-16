@@ -13,6 +13,7 @@ namespace PracticaLINQ.Logica.Producto
         {
 			try
 			{
+                Limpiar.LimpiarConsola();
                 ProductOrdenadoProNombre productOrdenadoProNombre = new ProductOrdenadoProNombre();
                 var productOrdenadoProNombreLista = productOrdenadoProNombre.ObtenerConsulta();
                 ImprimirProductOrdenadoProNombre(productOrdenadoProNombreLista);

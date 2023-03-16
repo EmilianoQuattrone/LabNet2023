@@ -7,6 +7,7 @@ namespace PracticaLINQ.Logica.Producto
     {
         public static void ObtenerProductPrimerElemento()
         {
+            Limpiar.LimpiarConsola();
             ProductPrimerElemento productPrimerElemento = new ProductPrimerElemento();
             productPrimerElemento.ObtenerConsulta();
             Intentos.VolverAIntentarlo();

@@ -14,7 +14,8 @@ namespace PracticaLINQ.Logica.Cliente
         {
 			try
 			{
-				CustomerPrimerosTres customerPrimerosTres = new CustomerPrimerosTres();
+                Limpiar.LimpiarConsola();
+                CustomerPrimerosTres customerPrimerosTres = new CustomerPrimerosTres();
 				var customerPrimerosTresLista = customerPrimerosTres.ObtenerConsulta();
 				ImprimirCustomerPrimerosTres(customerPrimerosTresLista);
             }

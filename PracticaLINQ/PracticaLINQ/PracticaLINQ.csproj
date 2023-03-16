@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcionalidades\Espacio.cs" />
     <Compile Include="Funcionalidades\IngresoUsuario.cs" />
     <Compile Include="Funcionalidades\Intentos.cs" />
     <Compile Include="Funcionalidades\Limpiar.cs" />

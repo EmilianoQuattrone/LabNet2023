@@ -12,6 +12,7 @@ namespace PracticaLINQ.Logica.Producto
     {
         public static void ObtenerProductPrimero()
         {
+            Limpiar.LimpiarConsola();
             ProductPrimero.ObtenerConsulta();
             Intentos.VolverAIntentarlo();
         }

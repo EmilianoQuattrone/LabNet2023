@@ -16,7 +16,8 @@ namespace PracticaLINQ.Logica.Producto
         {
 			try
 			{
-				ProductCategories productCategories = new ProductCategories();
+                Limpiar.LimpiarConsola();
+                ProductCategories productCategories = new ProductCategories();
 				var productCategoriesLista = productCategories.ObtenerConsulta();
                 ImprimirProductCategories(productCategoriesLista);
 

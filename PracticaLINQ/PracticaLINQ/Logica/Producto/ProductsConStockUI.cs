@@ -13,7 +13,8 @@ namespace PracticaLINQ.Logica
         {
 			try
 			{
-				ProducrConStock producrConStock = new ProducrConStock();
+                Limpiar.LimpiarConsola();
+                ProducrConStock producrConStock = new ProducrConStock();
 				var productsLista = producrConStock.ObtenerConsulta();
 				ImprimirProductoConStock(productsLista);
 			}
