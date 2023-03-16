@@ -1,4 +1,5 @@
 ﻿using EF.Logica.Customer;
+using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,11 @@ namespace PracticaLINQ.Logica
             catch (Exception ex) 
             {
                 Mensajes.MensajeExcepcion(ex);   
-            }              
+            }
+            finally
+            {
+                Intentos.VolverAIntentarlo();
+            }
         }
 
         public static void ImprimirCustomer(IEnumerable<CustomerDtos> query)

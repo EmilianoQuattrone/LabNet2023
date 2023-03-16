@@ -1,5 +1,6 @@
 ﻿using EF.Entidades;
 using EF.Logica.Productos;
+using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace PracticaLINQ.Logica
 {
     public class ProductsSinStockUI
     {
-        public static void ObtenerPRoductosSinStock()
+        public static void ObtenerProductosSinStock()
         {
 			try
 			{
@@ -20,6 +21,10 @@ namespace PracticaLINQ.Logica
 			{
                 Mensajes.MensajeExcepcion(ex);
 			}
+            finally
+            {
+                Intentos.VolverAIntentarlo();
+            }
         }
 
         public static void ImprimirProductoSinStock(IEnumerable<Products> query)

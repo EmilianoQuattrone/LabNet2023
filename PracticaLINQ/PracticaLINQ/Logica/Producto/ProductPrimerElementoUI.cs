@@ -1,4 +1,5 @@
 ﻿using EF.Logica.Productos;
+using PracticaLINQ.Funcionalidades;
 
 namespace PracticaLINQ.Logica.Producto
 {
@@ -8,6 +9,7 @@ namespace PracticaLINQ.Logica.Producto
         {
             ProductPrimerElemento productPrimerElemento = new ProductPrimerElemento();
             productPrimerElemento.ObtenerConsulta();
+            Intentos.VolverAIntentarlo();
         }
     }
 }

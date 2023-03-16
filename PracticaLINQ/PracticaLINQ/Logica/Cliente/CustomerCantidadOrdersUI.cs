@@ -1,5 +1,6 @@
 ﻿using EF.Logica.Customer;
 using EF.Logica.Customer.DTOs;
+using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,10 @@ namespace PracticaLINQ.Logica.Cliente
             catch (Exception ex)
             {
                 Mensajes.MensajeExcepcion(ex);
+            }
+            finally
+            {
+                Intentos.VolverAIntentarlo();
             }
         }
 

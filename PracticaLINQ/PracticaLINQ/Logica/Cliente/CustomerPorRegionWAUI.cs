@@ -1,5 +1,6 @@
 ﻿using EF.Entidades;
 using EF.Logica.Customer;
+using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,10 @@ namespace PracticaLINQ.Logica
 
 				Mensajes.MensajeExcepcion(ex);
 			}
+            finally
+            {
+                Intentos.VolverAIntentarlo();
+            }
         }
 
 		public static void ImprimirCustomerConRegionWA(IEnumerable<Customers> query)

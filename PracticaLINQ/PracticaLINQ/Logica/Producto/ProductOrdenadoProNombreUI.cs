@@ -1,5 +1,6 @@
 ﻿using EF.Logica.Productos;
 using EF.Logica.Productos.DTOs;
+using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,10 @@ namespace PracticaLINQ.Logica.Producto
 			{
                 Mensajes.MensajeExcepcion(ex);
 			}
+            finally
+            {
+                Intentos.VolverAIntentarlo();
+            }
         }
 
         public static void ImprimirProductOrdenadoProNombre(IEnumerable<ProductOrdenadoProNombreDtos> query)

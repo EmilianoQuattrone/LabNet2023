@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcionalidades\IngresoUsuario.cs" />
+    <Compile Include="Funcionalidades\Intentos.cs" />
+    <Compile Include="Funcionalidades\Limpiar.cs" />
     <Compile Include="Logica\Cliente\CustomerCantidadOrdersUI.cs" />
     <Compile Include="Logica\Cliente\CustomerMayusculaMinusculaUI.cs" />
     <Compile Include="Logica\Cliente\CustomerOrdersUI.cs" />
@@ -59,12 +62,15 @@
     <Compile Include="Logica\Producto\ProductCategoriesUI.cs" />
     <Compile Include="Logica\Producto\ProductOrdenadoProNombreUI.cs" />
     <Compile Include="Logica\Producto\ProductPrimerElementoUI.cs" />
+    <Compile Include="Logica\Producto\ProductPrimeroUI.cs" />
     <Compile Include="Logica\Producto\ProductsConStockUI.cs" />
     <Compile Include="Logica\Producto\ProductSinStockMayorMenorUI.cs" />
     <Compile Include="Logica\Producto\ProductsSinStockUI.cs" />
     <Compile Include="MensajesUI\Mensajes.cs" />
+    <Compile Include="MenusUI\Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones\Validar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

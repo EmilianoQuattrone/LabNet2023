@@ -8,11 +8,52 @@ namespace PracticaLINQ.MensajesUI
 {
     public class Mensajes
     {
+
+        public static void MensajeMenuPantalla()
+        {
+            Console.WriteLine("----- Menu Principal -----");
+            Console.WriteLine();
+            Console.WriteLine("1 - Mostrar todos los cliente.");
+            Console.WriteLine("2 - Mostrar productos sin Stock.");
+            Console.WriteLine("3 - Mostrar productos con Stock y que cuentas mas de 3 por unidad.");
+            Console.WriteLine("4 - Mostrar clientes por Region = WA");
+            Console.WriteLine("5 - Producto ID = 789");
+            Console.WriteLine("6 - Mostrar nombres de clientes en Mayuscula y Miniscula.");
+            Console.WriteLine("7 - Mostrar clientes por Region = WA y fecha mayor a 1/1/1997");
+            Console.WriteLine("8 - Mostrar clientes por Region = WA, los primeros 3," );
+            Console.WriteLine("9 - Mostrar productos ordenados por nombre");
+            Console.WriteLine("10 - Mostrar productos ordenados por Stock vacio de Mayor a Menor.");
+            Console.WriteLine("11 - Mostrar distintas categorias de los productos");
+            Console.WriteLine("12 - Mostrar el primer elemento de una lista de Productos.");
+            Console.WriteLine("13 - Mostrar la cantidad de clientes con ordenes asociadas");
+        }
         public static void MensajeCustomer(CustomerDtos cd)
         {
             Console.WriteLine($"Id: {cd.Id} - Nombre: {cd.Nombre}");
         }
+        public static void MensajeCustomerCantidadOrders(CustomerCantidadOrdersDto cco)
+        {
+            Console.WriteLine($"Nombre cliente: {cco.NombreCliente} - Orden asociada: {cco.NombreOrden}");
+        }
+        public static void MensajeCustomerPrimerosTres(CustomerPrimerosTresDtos cpt)
+        {
+            Console.WriteLine($"Nombre: {cpt.Nombre} - Region: {cpt.Region}");
+        }
 
+        public static void MensajeCustomerConRegionWA(Customers cs)
+        {
+            Console.WriteLine($"Nombre: {cs.ContactName} - Region: {cs.Region}");
+        }
+
+        public static void MensajeCustomerMayusculaMinuscula(CustomerMayusculaMinusculaDtos cmn)
+        {
+            Console.WriteLine($"Nombre en Mayuscula: {cmn.Mayuscula} - Nombre en Miniscula: {cmn.Minuscula}");
+        }
+
+        public static void MensajeCustomerOrders(CustomerOrdersDtos co)
+        {
+            Console.WriteLine($"Nombre: {co.NombreCliente} - Region: {co.Region} - Fecha: {co.OrdenFecha}");
+        }
         public static void MensajeProductosSinStock(Products pd)
         {
             Console.WriteLine($"Producto: {pd.ProductName} - Sin stock: {pd.UnitsInStock}");
@@ -39,35 +80,21 @@ namespace PracticaLINQ.MensajesUI
             Console.WriteLine($"Nombre producto: {pon.NombreProducto}");
         }
 
-        public static void MensajeCustomerCantidadOrders(CustomerCantidadOrdersDto cco)
-        {
-            Console.WriteLine($"Nombre cliente: {cco.NombreCliente} - Orden asociada: {cco.NombreOrden}");
-        }
-        public static void MensajeCustomerPrimerosTres(CustomerPrimerosTresDtos cpt)
-        {
-            Console.WriteLine($"Nombre: {cpt.Nombre} - Region: {cpt.Region}");
-        }
-
-        public static void MensajeCustomerConRegionWA(Customers cs)
-        {
-            Console.WriteLine($"Nombre: {cs.ContactName} - Region: {cs.Region}");
-        }
-
-        public static void MensajeCustomerMayusculaMinuscula(CustomerMayusculaMinusculaDtos cmn)
-        {
-            Console.WriteLine($"Nombre en Mayuscula: {cmn.Mayuscula} - Nombre en Miniscula: {cmn.Minuscula}");
-        }
-
-        public static void MensajeCustomerOrders(CustomerOrdersDtos co)
-        {
-            Console.WriteLine($"Nombre: {co.NombreCliente} - Region: {co.Region} - Fecha: {co.OrdenFecha}");
-        }
-
         public static void MensajeExcepcion(Exception ex)
         {
             Console.WriteLine($"Error al intentar Obtener los Customer. \n{ex}");
         }
 
+        public static void MensajeOpcionNoValida()
+        {
+            Console.WriteLine("Opcion no valida.");
+        }
+
+        public static void MensajeVolverAIntentarlo()
+        {
+            Console.WriteLine("¿Volver a intentarlo?" +
+                "\nPresione 1 para SI" + "\nPresione cualquier NUMERO para salir.");
+        }
         public static void FinDePrograma()
         {
             Console.WriteLine("Fin del programa.");
