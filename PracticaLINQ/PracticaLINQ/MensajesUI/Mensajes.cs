@@ -29,6 +29,11 @@ namespace PracticaLINQ.MensajesUI
             Console.WriteLine($"Nombre productos: {pmn.Nombre} - Sotck: {pmn.Stock}");
         }
 
+        public static void MensajeProductCategories(ProductCategoriesDto pc)
+        {
+            Console.WriteLine($"Nombre producto: {pc.NombreProducto} - Categorias: {pc.Categorias}");
+        }
+
         public static void MensajeObtenerProductOrdenadoProNombre(ProductOrdenadoProNombreDtos pon)
         {
             Console.WriteLine($"Nombre producto: {pon.NombreProducto}");

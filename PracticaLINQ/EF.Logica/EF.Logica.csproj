@@ -60,10 +60,12 @@
     <Compile Include="Customer\DTOs\CustomerPrimerosTresDtos.cs" />
     <Compile Include="Interfaces\IObtener.cs" />
     <Compile Include="Productos\DTOs\ProducrConStockDto.cs" />
+    <Compile Include="Productos\DTOs\ProductCategoriesDto.cs" />
     <Compile Include="Productos\DTOs\ProductOrdenadoProNombreDtos.cs" />
     <Compile Include="Productos\DTOs\ProductSinStockMayorMenorDtos.cs" />
     <Compile Include="Productos\Mensaje\ProductMensaje.cs" />
     <Compile Include="Productos\ProducrConStock.cs" />
+    <Compile Include="Productos\ProductCategories.cs" />
     <Compile Include="Productos\ProductOrdenadoProNombre.cs" />
     <Compile Include="Productos\ProductPrimerElemento.cs" />
     <Compile Include="Productos\ProductSinStock.cs" />
