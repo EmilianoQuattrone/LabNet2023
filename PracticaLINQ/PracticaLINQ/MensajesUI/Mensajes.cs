@@ -1,5 +1,6 @@
 ﻿using EF.Entidades;
 using EF.Logica.Customer;
+using EF.Logica.Productos.DTOs;
 using System;
 
 namespace PracticaLINQ.MensajesUI
@@ -14,6 +15,12 @@ namespace PracticaLINQ.MensajesUI
         public static void MensajeProductosSinStock(Products pd)
         {
             Console.WriteLine($"Producto: {pd.ProductName} - Sin stock: {pd.UnitsInStock}");
+        }
+
+        public static void MensajeProductoConStock(ProducrConStockDto pd)
+        {
+            Console.WriteLine($"Producto: {pd.Nombre} - Stock: {pd.Stock} - " +
+                $"Unidades Vendidas: {pd.UnidadPrecio}");
         }
 
         public static void MensajeExcepcion(Exception ex)

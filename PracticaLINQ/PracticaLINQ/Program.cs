@@ -10,7 +10,8 @@ namespace PracticaLINQ
         static void Main(string[] args)
         {
             //CustomersUI.ObtenerCustomers();
-            ProductsUI.ObtenerPRoductosSinStock();
+            //ProductsUI.ObtenerPRoductosSinStock();
+            ProductsConStockUI.ObtenerProductosConStock();
             Mensajes.FinDePrograma();
         }
     }

@@ -52,6 +52,8 @@
     <Compile Include="Customer\CustomerLogica.cs" />
     <Compile Include="Customer\CustomerDtos.cs" />
     <Compile Include="Interfaces\IObtener.cs" />
+    <Compile Include="Productos\DTOs\ProducrConStockDto.cs" />
+    <Compile Include="Productos\ProducrConStock.cs" />
     <Compile Include="Productos\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
