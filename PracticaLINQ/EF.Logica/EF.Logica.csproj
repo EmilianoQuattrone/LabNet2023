@@ -58,7 +58,9 @@
     <Compile Include="Customer\DTOs\CustomerOrdersDtos.cs" />
     <Compile Include="Interfaces\IObtener.cs" />
     <Compile Include="Productos\DTOs\ProducrConStockDto.cs" />
+    <Compile Include="Productos\Mensaje\ProductMensaje.cs" />
     <Compile Include="Productos\ProducrConStock.cs" />
+    <Compile Include="Productos\ProductPrimerElemento.cs" />
     <Compile Include="Productos\ProductSinStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,6 +3,7 @@ using EF.Logica.Customer;
 using EF.Logica.Productos;
 using PracticaLINQ.Logica;
 using PracticaLINQ.Logica.Cliente;
+using PracticaLINQ.Logica.Producto;
 using PracticaLINQ.MensajesUI;
 
 namespace PracticaLINQ
@@ -16,7 +17,8 @@ namespace PracticaLINQ
             //ProductsConStockUI.ObtenerProductosConStock();
             //CustomerPorRegionWAUI.ObtenerCustomerPorRegionWA();
             //CustomerMayusculaMinusculaUI.ObtenerCustomerMayusculaMinuscula();
-            CustomerOrdersUI.ObtenerCustomerOrders();
+            //CustomerOrdersUI.ObtenerCustomerOrders();
+            ProductPrimerElementoUI.ObtenerProductPrimerElemento();
             Mensajes.FinDePrograma();
         }
     }
