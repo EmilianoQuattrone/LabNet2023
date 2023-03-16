@@ -1,10 +1,4 @@
-﻿using System;
-using EF.Logica.Customer;
-using EF.Logica.Productos;
-using PracticaLINQ.Funcionalidades;
-using PracticaLINQ.Logica;
-using PracticaLINQ.Logica.Cliente;
-using PracticaLINQ.Logica.Producto;
+﻿using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using PracticaLINQ.MenusUI;
 
@@ -16,7 +10,6 @@ namespace PracticaLINQ
         {
             Mensajes.MensajeMenuPantalla();
             Menu.MenuPrincipal(IngresoUsuario.IngresoUsuarioSoloNumeros());
-            Mensajes.FinDePrograma();
         }
     }
 }

@@ -3,7 +3,6 @@ using EF.Logica.Customer.DTOs;
 using PracticaLINQ.Funcionalidades;
 using PracticaLINQ.MensajesUI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace PracticaLINQ.Logica.Cliente

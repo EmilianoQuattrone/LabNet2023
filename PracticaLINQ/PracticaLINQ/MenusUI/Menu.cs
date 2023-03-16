@@ -3,11 +3,6 @@ using PracticaLINQ.Logica;
 using PracticaLINQ.Logica.Cliente;
 using PracticaLINQ.Logica.Producto;
 using PracticaLINQ.MensajesUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PracticaLINQ.MenusUI
 {
