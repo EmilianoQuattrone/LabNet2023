@@ -1,6 +1,6 @@
 ﻿using EF.OtrasFunciones.Validaciones;
 
-namespace PracticaLINQ.Funcionalidades
+namespace EF.OtrasFunciones.Funcionalidades
 {
     public class IngresoUsuario
     {
