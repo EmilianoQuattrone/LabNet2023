@@ -13,7 +13,7 @@ namespace EF.Logica.Customer
 
             {
                 return context.Customers
-                       .Take(5)
+                       .Take(1)
                        .Select(c => new CustomerDtos
                        {
                            Id = c.CustomerID,
