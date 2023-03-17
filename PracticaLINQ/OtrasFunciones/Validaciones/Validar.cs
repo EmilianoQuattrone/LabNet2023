@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PracticaLINQ.Vidaciones
+namespace PracticaLINQ.OtrasFunciones
 {
     public class Validar
     {

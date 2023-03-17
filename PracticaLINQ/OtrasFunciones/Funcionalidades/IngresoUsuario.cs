@@ -1,6 +1,6 @@
-﻿using PracticaLINQ.Vidaciones;
+﻿using PracticaLINQ.OtrasFunciones;
 
-namespace PracticaLINQ.Funcionalidades
+namespace PracticaLINQ.OtrasFunciones
 {
     public class IngresoUsuario
     {
