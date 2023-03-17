@@ -16,7 +16,7 @@ namespace PracticaLINQ.MensajesUI
             Espacio.SaltoDeLinea();
             Console.WriteLine("1 - Mostrar todos los cliente.");
             Console.WriteLine("2 - Mostrar productos sin Stock.");
-            Console.WriteLine("3 - Mostrar productos con Stock y que cuestan mas de 3 por unidad.");
+            Console.WriteLine("3 - Mostrar productos con Stock y que cuentas mas de 3 por unidad.");
             Console.WriteLine("4 - Mostrar clientes por Region = WA");
             Console.WriteLine("5 - Producto ID = 789");
             Console.WriteLine("6 - Mostrar nombres de clientes en Mayuscula y Miniscula.");
@@ -30,7 +30,7 @@ namespace PracticaLINQ.MensajesUI
         }
         public static void MensajeCustomer(CustomerDtos cd)
         {
-            Console.WriteLine($"Nombre Cliente: {cd.Nombre}");
+            Console.WriteLine($"Id: {cd.Id} - Nombre: {cd.Nombre}");
         }
         public static void MensajeCustomerCantidadOrders(CustomerCantidadOrdersDto cco)
         {
@@ -63,7 +63,7 @@ namespace PracticaLINQ.MensajesUI
         public static void MensajeProductoConStock(ProducrConStockDto pd)
         {
             Console.WriteLine($"Producto: {pd.Nombre} - Stock: {pd.Stock} - " +
-                $"Unidades que cuestan mas 3: {pd.UnidadPrecio}");
+                $"Unidades Vendidas: {pd.UnidadPrecio}");
         }
 
         public static void MensajeProductSinStockMayorMenor(ProductSinStockMayorMenorDtos pmn)
@@ -73,7 +73,7 @@ namespace PracticaLINQ.MensajesUI
 
         public static void MensajeProductCategories(ProductCategoriesDto pc)
         {
-            Console.WriteLine($"Categorias: {pc.Categorias} - Nombre producto: {pc.NombreProducto}");
+            Console.WriteLine($"Nombre producto: {pc.NombreProducto} - Categorias: {pc.Categorias}");
         }
 
         public static void MensajeObtenerProductOrdenadoProNombre(ProductOrdenadoProNombreDtos pon)

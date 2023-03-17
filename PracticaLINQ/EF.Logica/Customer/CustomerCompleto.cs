@@ -1,13 +1,11 @@
 ﻿using EF.Data;
-using EF.Entidades;
-using EF.Logica.Context;
 using EF.Logica.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace EF.Logica.Customer
 {
-    public class CustomerCompleto : Northwind, IObtener<CustomerDtos>
+    public class CustomerCompleto : IObtener<CustomerDtos>
     {
         public IEnumerable<CustomerDtos> ObtenerConsulta()
         {

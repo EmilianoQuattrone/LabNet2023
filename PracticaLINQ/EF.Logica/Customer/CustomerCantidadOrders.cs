@@ -18,6 +18,7 @@ namespace EF.Logica.Customer
                 var query = from c in context.Customers
                             join o in context.Orders
                             on c.CustomerID equals o.CustomerID
+                            where o.ShipName != null
                             orderby c.CustomerID ascending
                             select new CustomerCantidadOrdersDto
                             {

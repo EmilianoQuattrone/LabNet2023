@@ -15,11 +15,12 @@ namespace EF.Logica.Productos
                 var query = from p in context.Products
                             join c in context.Categories
                             on p.CategoryID equals c.CategoryID
+                            where c.CategoryName != null
                             orderby p.ProductName
                             select new ProductCategoriesDto
                             {
-                                NombreProducto = p.ProductName,
-                                Categorias = c.CategoryName
+                                Categorias = c.CategoryName,
+                                NombreProducto = p.ProductName
                             };
 
                 return query.ToList();

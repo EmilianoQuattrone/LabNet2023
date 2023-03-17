@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\Northwind.cs" />
     <Compile Include="Customer\CustomerCantidadOrders.cs" />
     <Compile Include="Customer\CustomerCompleto.cs" />
     <Compile Include="Customer\CustomerMayusculaMinuscula.cs" />

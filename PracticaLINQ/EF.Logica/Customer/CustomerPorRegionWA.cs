@@ -6,14 +6,15 @@ using System.Linq;
 
 namespace EF.Logica.Customer
 {
-    public class CustomerPorRegionWA :  IObtener<Customers>
+    public class CustomerPorRegionWA : IObtener<Customers>
     {
         public IEnumerable<Customers> ObtenerConsulta()
         {
             using (var context = new NorthwindContext()) 
             {
+                string region = "WA";
                 var query = from c in context.Customers 
-                            where c.Region == "WA"
+                            where c.Region == region
                             select c;
                 return query.ToList();
             }

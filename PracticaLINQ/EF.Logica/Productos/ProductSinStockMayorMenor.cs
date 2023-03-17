@@ -1,11 +1,8 @@
 ﻿using EF.Data;
 using EF.Logica.Interfaces;
 using EF.Logica.Productos.DTOs;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EF.Logica.Productos
 {
