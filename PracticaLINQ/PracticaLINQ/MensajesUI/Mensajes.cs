@@ -27,7 +27,6 @@ namespace PracticaLINQ.MensajesUI
             Console.WriteLine("11 - Mostrar distintas categorias de los productos");
             Console.WriteLine("12 - Mostrar el primer elemento de una lista de Productos.");
             Console.WriteLine("13 - Mostrar la cantidad de clientes con ordenes asociadas");
-
         }
         public static void MensajeCustomer(CustomerDtos cd)
         {
