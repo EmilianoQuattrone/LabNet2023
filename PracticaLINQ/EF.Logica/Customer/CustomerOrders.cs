@@ -20,6 +20,7 @@ namespace EF.Logica.Customer
                             join o in context.Orders                    
                             on c.CustomerID equals o.CustomerID
                             where o.OrderDate > fechaOrden
+                            orderby o.OrderDate 
                             select new CustomerOrdersDtos 
                             {
                                 NombreCliente = c.ContactName,
