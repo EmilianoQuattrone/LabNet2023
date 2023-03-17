@@ -34,7 +34,7 @@ namespace PracticaLINQ.MensajesUI
         }
         public static void MensajeCustomerCantidadOrders(CustomerCantidadOrdersDto cco)
         {
-            Console.WriteLine($"Nombre cliente: {cco.NombreCliente} - Orden asociada: {cco.NombreOrden}");
+            Console.WriteLine($"Nombre cliente: {cco.NombreCliente} - Orden asociada: {cco.OrdenCantidad}");
         }
         public static void MensajeCustomerPrimerosTres(CustomerPrimerosTresDtos cpt)
         {
@@ -71,9 +71,9 @@ namespace PracticaLINQ.MensajesUI
             Console.WriteLine($"Nombre productos: {pmn.Nombre} - Sotck: {pmn.Stock}");
         }
 
-        public static void MensajeProductCategories(ProductCategoriesDto pc)
+        public static void MensajeProductCategories(CategoriesDto pc)
         {
-            Console.WriteLine($"Categorias: {pc.Categorias} - Nombre producto: {pc.NombreProducto}");
+            Console.WriteLine($"Categorias: {pc.Categorias}.");
         }
 
         public static void MensajeObtenerProductOrdenadoProNombre(ProductOrdenadoProNombreDtos pon)

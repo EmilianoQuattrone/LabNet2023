@@ -18,12 +18,11 @@ namespace EF.Logica.Customer
                 var query = from c in context.Customers
                             join o in context.Orders
                             on c.CustomerID equals o.CustomerID
-                            where o.ShipName != null
-                            orderby c.CustomerID ascending
+                            group o by c.CompanyName into ordenResultado
                             select new CustomerCantidadOrdersDto
                             {
-                                NombreCliente = c.ContactName,
-                                NombreOrden = o.ShipName,
+                                NombreCliente = ordenResultado.Key, 
+                                OrdenCantidad = ordenResultado.Count()
                             };
 
                 return query.ToList();

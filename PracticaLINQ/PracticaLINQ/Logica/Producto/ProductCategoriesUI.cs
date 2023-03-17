@@ -14,7 +14,7 @@ namespace PracticaLINQ.Logica.Producto
 			try
 			{
                 Limpiar.LimpiarConsola();
-                ProductCategories productCategories = new ProductCategories();
+                Categorie productCategories = new Categorie();
 				var productCategoriesLista = productCategories.ObtenerConsulta();
                 ImprimirProductCategories(productCategoriesLista);
 
@@ -29,7 +29,7 @@ namespace PracticaLINQ.Logica.Producto
             }
         }
 
-        public static void ImprimirProductCategories(IEnumerable<ProductCategoriesDto> query)
+        public static void ImprimirProductCategories(IEnumerable<CategoriesDto> query)
         {
             foreach (var item in query) 
             {

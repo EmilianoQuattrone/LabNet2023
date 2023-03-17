@@ -10,6 +10,6 @@ namespace EF.Logica.Customer.DTOs
     {
         public string NombreCliente { get; set; }
 
-        public string NombreOrden { get; set; }
+        public int OrdenCantidad { get; set; }
     }
 }
