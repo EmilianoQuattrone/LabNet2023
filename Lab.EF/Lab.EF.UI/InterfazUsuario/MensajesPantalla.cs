@@ -1,4 +1,5 @@
-﻿using Lab.EF.UI.OtrasFuncionalidades;
+﻿using Lab.EF.Entidades;
+using Lab.EF.UI.OtrasFuncionalidades;
 using System;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
@@ -32,10 +33,19 @@ namespace Lab.EF.UI.InterfazUsuario
                 "\nPresione cualquier NUMERO para salir del programa.");
         }
 
+        public static void MensajeListaEmpleado(Employees item)
+        {
+            Console.WriteLine($"{item.FirstName} {item.LastName}");
+        }
+
         public static void MensajeEmpleados()
         {
             LimpiarPantalla.Limpiar();
             Console.WriteLine("Empleados: ");
+        }
+        public static void ListadoCategorias(Categories item)
+        {
+            Console.WriteLine($"ID: {item.CategoryID} - Nombre: {item.CategoryName} - Descripcion: {item.Description}");
         }
 
         public static void MensajeCategorias()

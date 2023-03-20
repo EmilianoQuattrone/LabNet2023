@@ -1,7 +1,9 @@
-﻿using Lab.EF.Logica;
+﻿using Lab.EF.Entidades;
+using Lab.EF.Logica;
 using Lab.EF.Logica.OtrasFuncionalidades;
 using Lab.EF.UI.InterfazUsuario;
 using System;
+using System.Collections.Generic;
 
 namespace Lab.EF.UI.Logica
 {
@@ -12,7 +14,12 @@ namespace Lab.EF.UI.Logica
             try
             {
                 EmpleadosLogica empleadosLogica = new EmpleadosLogica();
-                empleadosLogica.ListadoEmpleados();
+                List<Employees> empleadosLogicaLista = empleadosLogica.ObtenerTodos();
+
+                foreach (var item in empleadosLogicaLista)
+                {
+                    MensajesPantalla.MensajeListaEmpleado(item);
+                }
             }
             catch (Exception ex)
             {

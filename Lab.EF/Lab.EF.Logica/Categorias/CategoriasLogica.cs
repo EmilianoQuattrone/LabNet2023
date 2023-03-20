@@ -1,9 +1,7 @@
 ﻿using Lab.EF.Data;
 using Lab.EF.Entidades;
-using Lab.EF.Logica.Categorias;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace Lab.EF.Logica
 {
@@ -19,14 +17,6 @@ namespace Lab.EF.Logica
         public List<Categories> ObtenerTodos()
         {
             return northwindContext.Categories.ToList();
-        }
-
-        public void ListarCategorias()
-        {
-            foreach (var item in ObtenerTodos())
-            {
-                CategoriaListaMensaje.ListadoCategorias(item);
-            }
         }
 
         public void Add(Categories categoria)

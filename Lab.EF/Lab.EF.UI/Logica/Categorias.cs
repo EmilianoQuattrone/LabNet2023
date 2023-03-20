@@ -3,6 +3,7 @@ using Lab.EF.Logica;
 using Lab.EF.Logica.OtrasFuncionalidades;
 using Lab.EF.UI.InterfazUsuario;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 
@@ -15,7 +16,12 @@ namespace Lab.EF.UI.Logica
             try
             {
                 CategoriasLogica categoriasLogica = new CategoriasLogica();
-                categoriasLogica.ListarCategorias();
+                List<Categories> categoriasLogicaLista = categoriasLogica.ObtenerTodos();
+
+                foreach (var item in categoriasLogicaLista)
+                {
+                    MensajesPantalla.ListadoCategorias(item);
+                }
             }
             catch (Exception ex)
             {
