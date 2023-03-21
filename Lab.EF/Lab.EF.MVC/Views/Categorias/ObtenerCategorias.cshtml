@@ -10,6 +10,7 @@
     <tr>
         <td>Nombre</td>
         <td>Descripcion</td>
+        <td>Eliminar</td>
     </tr>
 
     @foreach (var categorias in Model)
@@ -17,6 +18,8 @@
         <tr>
             <td>@categorias.Nombre</td>
             <td>@categorias.Descripcion</td>
+            <td>@Html.ActionLink("Eliminar", "EliminarCategoria", 
+               new { Id = categorias.Id })</td>
         </tr>
 
     }

@@ -29,6 +29,14 @@ namespace Lab.EF.Logica
             }
         }
 
+        public Categories ObtenerUno(int id)
+        {
+            using (var context = new NorthwindContext())
+            {
+                return context.Categories.FirstOrDefault(c => c.CategoryID == id);
+            }
+        }
+
         public void Add(CategoriasDto dto)
         {
             using (var context = new NorthwindContext())
@@ -50,7 +58,7 @@ namespace Lab.EF.Logica
                 var categoriaModificada = context.Categories.FirstOrDefault(c => c.CategoryID == dto.Id);
                 if (categoriaModificada == null)
                 {
-                    throw new Exception("El empleado no se encontro");
+                    throw new Exception("La categoria no se encontro");
                 }
 
                 categoriaModificada.CategoryName = dto.Nombre;

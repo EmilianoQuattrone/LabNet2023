@@ -1,0 +1,22 @@
+﻿@model Lab.EF.MVC.Models.CategoriasView
+@{
+    ViewBag.Title = "Eliminar Categoria";
+}
+
+<h2>Eliminar Categoria</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(c => c.Id)
+    @Html.LabelFor(c => c.Nombre)
+    <br />
+    @Html.TextAreaFor(c => c.Nombre, new { disabled = "disabled" })
+
+    <br />
+    @Html.LabelFor(c => c.Descripcion)
+    <br />
+    @Html.TextAreaFor(c => c.Descripcion, new { disabled = "disabled" })
+    <br />
+    <input class="btn btn-primary" type="submit" value="Eliminar" />
+    <input class="btn btn-primary" type="submit" value="Cancelar" />
+}

@@ -14,8 +14,9 @@ namespace Lab.EF.MVC.Controllers
     {
 
         private CategoriasLogica _categoriasLogica = new CategoriasLogica();
+        private CategoriasView _categoriasView = new CategoriasView();
 
-        public ActionResult Index()
+        public ActionResult ObtenerCategorias()
         {
             List<CategoriasDto> categoriasLogicaLista = _categoriasLogica.ObtenerTodos();
             return View(categoriasLogicaLista);
@@ -37,11 +38,43 @@ namespace Lab.EF.MVC.Controllers
                     Descripcion = categoriesView.Descripcion,
                 };
                 _categoriasLogica.Add(nuevaCategoria);
-                return RedirectToAction("Index", "Categorias");
+                return RedirectToAction("ObtenerCategorias", "Categorias");
             }
             catch (Exception ex)
             {
                 return RedirectToAction("Index","Error");
+            }
+        }
+
+        public ActionResult EliminarCategoria(int id)
+        {
+            try
+            {
+                var entidad = _categoriasLogica.ObtenerUno(id);
+
+                _categoriasView.Id = entidad.CategoryID;
+                _categoriasView.Nombre = entidad.CategoryName;
+                _categoriasView.Descripcion = entidad.Description;
+
+                return View(_categoriasView);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult EliminarCategoria(CategoriasView categoriasView)
+        {
+            try
+            {              
+                _categoriasLogica.Eliminar(categoriasView.Id);
+                return RedirectToAction("ObtenerCategorias");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Index", "Error");
             }
         }
     }
