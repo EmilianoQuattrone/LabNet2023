@@ -1,0 +1,13 @@
+﻿@model Lab.EF.Logica.Categorias.CategoriasDto
+@{
+    ViewBag.Title = "Inserte Categoria";
+}
+
+<h2>Insertar Categoria</h2>
+
+@using (Html.BeginForm("InsertarCategoria", "Categorias", FormMethod.Post))
+{
+    <label>Nombre: </label> @Html.TextAreaFor(c => c.Nombre)
+    <label>Descripcion: </label> @Html.TextAreaFor(c => c.Descripcion)
+    <input type="submit" class="btn-primary" value="Guardar" />
+}

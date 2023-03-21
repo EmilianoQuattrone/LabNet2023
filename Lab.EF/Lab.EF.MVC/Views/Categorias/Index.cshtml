@@ -1,0 +1,25 @@
+﻿@model List<Lab.EF.Logica.Categorias.CategoriasDto>
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<h1>Listado de Categorias</h1>
+
+<table class="table-responsive">
+
+    <tr>
+        <td>Nombre</td>
+        <td>Descripcion</td>
+    </tr>
+
+    @foreach (var categorias in Model)
+    {
+        <tr>
+            <td>@categorias.Nombre</td>
+            <td>@categorias.Descripcion</td>
+        </tr>
+
+    }
+
+    <li>@Html.ActionLink("Insertar Categoria", "InsertarCategoria", "Categorias")</li>
+</table>

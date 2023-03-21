@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias\CategoriasDto.cs" />
     <Compile Include="Categorias\CategoriasLogica.cs" />
     <Compile Include="Empleados\EmpleadosLogica.cs" />
     <Compile Include="Interfaces\ICRUD.cs" />

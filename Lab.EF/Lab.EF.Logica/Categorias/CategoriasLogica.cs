@@ -1,11 +1,13 @@
 ﻿using Lab.EF.Data;
 using Lab.EF.Entidades;
+using Lab.EF.Logica.Categorias;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Lab.EF.Logica
 {
-    public class CategoriasLogica : NorthwindLogica, ICRUD<Categories>
+    public class CategoriasLogica : NorthwindLogica, ICRUD<CategoriasDto>
     {
         public CategoriasLogica() { }
 
@@ -14,31 +16,58 @@ namespace Lab.EF.Logica
             northwindContext = context;
         }
 
-        public List<Categories> ObtenerTodos()
+        public List<CategoriasDto> ObtenerTodos()
         {
-            return northwindContext.Categories.ToList();
+            using (var context = new NorthwindContext())
+            {
+                return context.Categories.Select(c => new CategoriasDto
+                {
+                    Id = c.CategoryID,
+                    Nombre = c.CategoryName,
+                    Descripcion = c.Description
+                }).ToList();
+            }
         }
 
-        public void Add(Categories categoria)
+        public void Add(CategoriasDto dto)
         {
-            northwindContext.Categories.Add(categoria);
-            northwindContext.SaveChanges();
+            using (var context = new NorthwindContext())
+            {
+                var nuevaCategoria = new Categories()
+                {
+                    CategoryName = dto.Nombre,
+                    Description = dto.Descripcion
+                };
+                context.Categories.Add(nuevaCategoria);
+                context.SaveChanges();
+            }
         }
 
-        public void Modificar(Categories categorias)
+        public void Modificar(CategoriasDto dto)
         {
-            var modificarCategoria = northwindContext.Categories.First(c => c.CategoryID == categorias.CategoryID);
-            modificarCategoria.CategoryID = categorias.CategoryID;
-            modificarCategoria.CategoryName = categorias.CategoryName;
-            modificarCategoria.Description = categorias.Description;
-            northwindContext.SaveChanges();                    
+            using (var context = new NorthwindContext())
+            {
+                var categoriaModificada = context.Categories.FirstOrDefault(c => c.CategoryID == dto.Id);
+                if (categoriaModificada == null)
+                {
+                    throw new Exception("El empleado no se encontro");
+                }
+
+                categoriaModificada.CategoryName = dto.Nombre;
+                categoriaModificada.Description = dto.Descripcion;
+                context.SaveChanges();
+            }
         }
 
         public void Eliminar(int id)
         {
-            var eliminarCategoria = northwindContext.Categories.Find(id);
-            northwindContext.Categories.Remove(eliminarCategoria);
-            northwindContext.SaveChanges();         
+
+            using (var context = new NorthwindContext())
+            {
+                var eliminarCategoria = context.Categories.FirstOrDefault(c => c.CategoryID == id);
+                context.Categories.Remove(eliminarCategoria);
+                context.SaveChanges();
+            }
         }
     }
 }
