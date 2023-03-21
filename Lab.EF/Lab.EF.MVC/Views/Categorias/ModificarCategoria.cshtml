@@ -11,6 +11,7 @@
     @Html.LabelFor(c => c.Nombre)
     <br />
     @Html.TextBoxFor(c => c.Nombre)
+    @Html.ValidationMessageFor(c => c.Nombre, "", new { @class = "text-danger" })
     <br />
     <br />
     @Html.LabelFor(c => c.Descripcion)

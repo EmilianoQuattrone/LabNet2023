@@ -32,17 +32,21 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                CategoriasDto nuevaCategoria = new CategoriasDto
+                if (ModelState.IsValid)
                 {
-                    Nombre = categoriesView.Nombre,
-                    Descripcion = categoriesView.Descripcion,
-                };
-                _categoriasLogica.Add(nuevaCategoria);
-                return RedirectToAction("ObtenerCategorias", "Categorias");
+                    CategoriasDto nuevaCategoria = new CategoriasDto
+                    {
+                        Nombre = categoriesView.Nombre,
+                        Descripcion = categoriesView.Descripcion,
+                    };
+                    _categoriasLogica.Add(nuevaCategoria);
+                    return RedirectToAction("ObtenerCategorias", "Categorias");
+                }
+                return View();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return RedirectToAction("Index", "Error");
+                return RedirectToAction("ErrorVista", "Error");
             }
         }
 
@@ -58,7 +62,7 @@ namespace Lab.EF.MVC.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("Index", "Error");
+                return RedirectToAction("ErrorVista", "Error");
             }
         }
 
@@ -67,17 +71,21 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                _categoriasLogica.Modificar(new CategoriasDto
+                if (ModelState.IsValid)
                 {
-                    Id = categoriasView.Id,
-                    Nombre = categoriasView.Nombre,
-                    Descripcion = categoriasView.Descripcion
-                });
-                return RedirectToAction("ObtenerCategorias");
+                    _categoriasLogica.Modificar(new CategoriasDto
+                    {
+                        Id = categoriasView.Id,
+                        Nombre = categoriasView.Nombre,
+                        Descripcion = categoriasView.Descripcion
+                    });
+                    return RedirectToAction("ObtenerCategorias");
+                }
+                return View(categoriasView);
             }
             catch (Exception)
             {
-                return RedirectToAction("Index", "Error");
+                return RedirectToAction("ErrorVista", "Error");
             }
         }
 
@@ -95,7 +103,7 @@ namespace Lab.EF.MVC.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("Index", "Error");
+                return RedirectToAction("ErrorVista", "Error");
             }
         }
 
@@ -109,7 +117,7 @@ namespace Lab.EF.MVC.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("Index", "Error");
+                return RedirectToAction("ErrorVista", "Error");
             }
         }
 

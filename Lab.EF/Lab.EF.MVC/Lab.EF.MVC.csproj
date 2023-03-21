@@ -187,7 +187,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Categorias\ObtenerCategorias.cshtml" />
-    <Content Include="Views\Error\Error.cshtml" />
+    <Content Include="Views\Error\ErrorVista.cshtml" />
     <Content Include="Views\Categorias\InsertarCategoria.cshtml" />
     <Content Include="Views\Categorias\EliminarCategoria.cshtml" />
     <Content Include="Views\Categorias\ModificarCategoria.cshtml" />

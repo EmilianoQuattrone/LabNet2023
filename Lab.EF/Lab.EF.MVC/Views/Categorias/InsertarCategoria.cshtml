@@ -7,7 +7,14 @@
 
 @using (Html.BeginForm("InsertarCategoria", "Categorias", FormMethod.Post))
 {
-    <label>Nombre: </label> @Html.TextAreaFor(c => c.Nombre)
-    <label>Descripcion: </label> @Html.TextAreaFor(c => c.Descripcion)
+    <label>Nombre categoria: </label>
+    @Html.TextBoxFor(c => c.Nombre, new { @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.Nombre, "", new { @class = "text-danger" })
+    <br />
+    <label>Descripcion: </label>
+    @Html.TextBoxFor(c => c.Descripcion, new { @class = "form-control" })
+    <br />
     <input type="submit" class="btn-primary" value="Guardar" />
+    <input class="btn btn-primary" type="button" value="Cancelar"
+           onclick="location.href='@Url.Action("VolverPaginaPrincipal","Categorias")'" />
 }
