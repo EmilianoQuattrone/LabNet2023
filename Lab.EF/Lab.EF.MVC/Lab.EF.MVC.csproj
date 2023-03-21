@@ -190,6 +190,7 @@
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\Categorias\InsertarCategoria.cshtml" />
     <Content Include="Views\Categorias\EliminarCategoria.cshtml" />
+    <Content Include="Views\Categorias\ModificarCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

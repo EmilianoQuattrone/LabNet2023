@@ -22,7 +22,7 @@ namespace Lab.EF.MVC.Controllers
             return View(categoriasLogicaLista);
         }
 
-        public ActionResult InsertarCategoria() 
+        public ActionResult InsertarCategoria()
         {
             return View();
         }
@@ -42,7 +42,42 @@ namespace Lab.EF.MVC.Controllers
             }
             catch (Exception ex)
             {
-                return RedirectToAction("Index","Error");
+                return RedirectToAction("Index", "Error");
+            }
+        }
+
+        public ActionResult ModificarCategoria(int id)
+        {
+            try
+            {
+                var entidad = _categoriasLogica.ObtenerUno(id);
+                _categoriasView.Id = entidad.CategoryID;
+                _categoriasView.Nombre = entidad.CategoryName;
+                _categoriasView.Descripcion = entidad.Description;
+                return View(_categoriasView);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult ModificarCategoria(CategoriasView categoriasView)
+        {
+            try
+            {
+                _categoriasLogica.Modificar(new CategoriasDto
+                {
+                    Id = categoriasView.Id,
+                    Nombre = categoriasView.Nombre,
+                    Descripcion = categoriasView.Descripcion
+                });
+                return RedirectToAction("ObtenerCategorias");
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Index", "Error");
             }
         }
 
@@ -76,6 +111,11 @@ namespace Lab.EF.MVC.Controllers
             {
                 return RedirectToAction("Index", "Error");
             }
+        }
+
+        public ActionResult VolverPaginaPrincipal()
+        {
+            return RedirectToAction("ObtenerCategorias");
         }
     }
 }

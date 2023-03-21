@@ -20,6 +20,8 @@
             <td>@categorias.Descripcion</td>
             <td>@Html.ActionLink("Eliminar", "EliminarCategoria", 
                new { Id = categorias.Id })</td>
+            <td>@Html.ActionLink("Modificar", "ModificarCategoria", 
+               new { Id = categorias.Id })</td>
         </tr>
 
     }
