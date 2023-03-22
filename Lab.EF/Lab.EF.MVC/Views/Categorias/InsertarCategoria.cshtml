@@ -13,6 +13,8 @@
     <br />
     <label>Descripcion: </label>
     @Html.TextBoxFor(c => c.Descripcion, new { @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.Descripcion, "", new { @class = "text-danger" })
+    <br />
     <br />
     <input class="btn btn-success" type="submit" value="Guardar" />
     <input class="btn btn-primary" type="button" value="Cancelar"

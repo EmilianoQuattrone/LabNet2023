@@ -17,6 +17,7 @@
     @Html.LabelFor(c => c.Descripcion)
     <br />
     @Html.TextBoxFor(c => c.Descripcion)
+    @Html.ValidationMessageFor(c => c.Descripcion, "", new { @class = "text-danger" })
     <br />
     <br />
     <input class="btn btn-primary" type="submit" value="Modificar" />
