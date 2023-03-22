@@ -4,9 +4,6 @@ using Lab.EF.Logica.Categorias;
 using Lab.EF.MVC.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Lab.EF.MVC.Controllers
@@ -23,70 +20,73 @@ namespace Lab.EF.MVC.Controllers
             return View(categoriasLogicaLista);
         }
 
-        public ActionResult InsertarCategoria()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult InsertarCategoria(CategoriasView categoriesView)
+        //Probando insertar modificar
+        public ActionResult Insertar()
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    CategoriasDto nuevaCategoria = new CategoriasDto
-                    {
-                        Nombre = categoriesView.Nombre,
-                        Descripcion = categoriesView.Descripcion,
-                    };
-                    _categoriasLogica.Add(nuevaCategoria);
-                    return RedirectToAction("ObtenerCategorias", "Categorias");
-                }
-                return View();
+                return View("InsertarModificarCategoria", new CategoriasView());
             }
             catch (Exception)
             {
-                return RedirectToAction("ErrorVista", "Error");
+                return RedirectToAction("ErrorVista","Error");
             }
         }
 
-        public ActionResult ModificarCategoria(int id)
+        //Probando insertar modificar
+        public ActionResult Modificar(int id)
         {
             try
             {
-                var entidad = _categoriasLogica.ObtenerUno(id);
+                Categories entidad = _categoriasLogica.ObtenerUno(id);
                 _categoriasView.Id = entidad.CategoryID;
                 _categoriasView.Nombre = entidad.CategoryName;
                 _categoriasView.Descripcion = entidad.Description;
-                return View(_categoriasView);
+                return View("InsertarModificarCategoria", _categoriasView);
             }
             catch (Exception)
             {
                 return RedirectToAction("ErrorVista", "Error");
             }
+
         }
 
+        //Probando insertar modificar
         [HttpPost]
-        public ActionResult ModificarCategoria(CategoriasView categoriasView)
+        public ActionResult InsertarModificarCategoria(CategoriasView view)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                if (view.Id > 0)
                 {
                     _categoriasLogica.Modificar(new CategoriasDto
                     {
-                        Id = categoriasView.Id,
-                        Nombre = categoriasView.Nombre,
-                        Descripcion = categoriasView.Descripcion
+                        Id = view.Id,
+                        Nombre = view.Nombre,
+                        Descripcion = view.Descripcion,
                     });
-                    return RedirectToAction("ObtenerCategorias");
                 }
-                return View(categoriasView);
+                else
+                {
+                    _categoriasLogica.Add(new CategoriasDto
+                    {
+                        Nombre = view.Nombre,
+                        Descripcion = view.Descripcion,
+                    });
+                }
+
+                return RedirectToAction("ObtenerCategorias");
             }
-            catch (Exception)
+            else
             {
-                return RedirectToAction("ErrorVista", "Error");
+                if (view.Id > 0)
+                {
+                    return View("InsertarModificarCategoria");
+                }
+                else
+                {
+                    return View("InsertarModificarCategoria", new CategoriasView());
+                }
             }
         }
 

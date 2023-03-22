@@ -191,6 +191,7 @@
     <Content Include="Views\Categorias\InsertarCategoria.cshtml" />
     <Content Include="Views\Categorias\EliminarCategoria.cshtml" />
     <Content Include="Views\Categorias\ModificarCategoria.cshtml" />
+    <Content Include="Views\Categorias\InsertarModificarCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

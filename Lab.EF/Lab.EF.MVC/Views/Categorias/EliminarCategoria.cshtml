@@ -8,17 +8,20 @@
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(c => c.Id)
-    @Html.LabelFor(c => c.Nombre)
+
+    <div class="form-group">
+         @Html.LabelFor(c => c.Nombre)
+         <br />
+         @Html.TextBoxFor(c => c.Nombre, new { disabled = "disabled" })
+    </div>
     <br />
-    @Html.TextBoxFor(c => c.Nombre, new { disabled = "disabled" })
+    <div class="form-group">
+         @Html.LabelFor(c => c.Descripcion)
+         <br />
+         @Html.TextAreaFor(c => c.Descripcion, new { disabled = "disabled" })
+    </div>
     <br />
-    <br />
-    @Html.LabelFor(c => c.Descripcion)
-    <br />
-    @Html.TextBoxFor(c => c.Descripcion, new { disabled = "disabled" })
-    <br />
-    <br />
-    <input class="btn btn-danger" type="submit" value="Eliminar" />
-    <input class="btn btn-primary" type="button" value="Cancelar"
-           onclick="location.href='@Url.Action("VolverPaginaPrincipal","Categorias")'" />
-}
+     <input class="btn btn-danger" type="submit" value="Eliminar" />
+     <input class="btn btn-primary" type="button" value="Cancelar"
+            onclick="location.href='@Url.Action("VolverPaginaPrincipal","Categorias")'" />
+ }

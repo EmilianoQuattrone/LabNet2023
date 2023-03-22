@@ -8,7 +8,7 @@
 <table class="table table-striped">
 
     <tr>
-        @Html.ActionLink("Insertar Categoria", "InsertarCategoria", "Categorias"
+        @Html.ActionLink("Insertar Categoria", "Insertar", "Categorias"
           , new { @class = "btn btn-success" })
     </tr>
     <br />
@@ -32,7 +32,7 @@
                 new { Id = categorias.Id }, new { @class = "btn btn-danger" })
             </td>
             <td scope="col">
-                @Html.ActionLink("Modificar", "ModificarCategoria",
+                @Html.ActionLink("Modificar", "Modificar",
                 new { Id = categorias.Id }, new { @class = "btn btn-primary" })
             </td>
         </tr>
