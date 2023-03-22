@@ -17,7 +17,8 @@
     <br />
     @Html.TextBoxFor(c => c.Descripcion, new { disabled = "disabled" })
     <br />
-    <input class="btn btn-primary" type="submit" value="Eliminar" />
+    <br />
+    <input class="btn btn-danger" type="submit" value="Eliminar" />
     <input class="btn btn-primary" type="button" value="Cancelar"
            onclick="location.href='@Url.Action("VolverPaginaPrincipal","Categorias")'" />
 }

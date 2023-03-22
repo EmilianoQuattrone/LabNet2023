@@ -5,26 +5,37 @@
 
 <h1>Listado de Categorias</h1>
 
-<table class="table-responsive">
+<table class="table table-striped">
 
     <tr>
-        <td>Nombre</td>
-        <td>Descripcion</td>
-        <td>Eliminar</td>
+        @Html.ActionLink("Insertar Categoria", "InsertarCategoria", "Categorias"
+          , new { @class = "btn btn-success" })
     </tr>
+    <br />
+    <thead>
+        <tr class="table-primary">
+            >
+            <td scope="col">Nombre</td>
+            <td scope="col">Descripcion</td>
+            <td scope="col">Eliminar</td>
+            <td scope="col">Modificar</td>
+        </tr>
+    </thead>
 
     @foreach (var categorias in Model)
     {
         <tr>
             <td>@categorias.Nombre</td>
             <td>@categorias.Descripcion</td>
-            <td>@Html.ActionLink("Eliminar", "EliminarCategoria", 
-               new { Id = categorias.Id })</td>
-            <td>@Html.ActionLink("Modificar", "ModificarCategoria", 
-               new { Id = categorias.Id })</td>
+            <td scope="col">
+                @Html.ActionLink("Eliminar", "EliminarCategoria",
+                new { Id = categorias.Id }, new { @class = "btn btn-danger" })
+            </td>
+            <td scope="col">
+                @Html.ActionLink("Modificar", "ModificarCategoria",
+                new { Id = categorias.Id }, new { @class = "btn btn-primary" })
+            </td>
         </tr>
 
     }
-
-    @Html.ActionLink("Insertar Categoria", "InsertarCategoria", "Categorias")
 </table>
