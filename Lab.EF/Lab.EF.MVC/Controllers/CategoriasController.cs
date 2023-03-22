@@ -20,7 +20,6 @@ namespace Lab.EF.MVC.Controllers
             return View(categoriasLogicaLista);
         }
 
-        //Probando insertar modificar
         public ActionResult Insertar()
         {
             try
@@ -33,7 +32,6 @@ namespace Lab.EF.MVC.Controllers
             }
         }
 
-        //Probando insertar modificar
         public ActionResult Modificar(int id)
         {
             try
@@ -48,10 +46,8 @@ namespace Lab.EF.MVC.Controllers
             {
                 return RedirectToAction("ErrorVista", "Error");
             }
-
         }
 
-        //Probando insertar modificar
         [HttpPost]
         public ActionResult InsertarModificarCategoria(CategoriasView view)
         {
@@ -95,11 +91,9 @@ namespace Lab.EF.MVC.Controllers
             try
             {
                 var entidad = _categoriasLogica.ObtenerUno(id);
-
                 _categoriasView.Id = entidad.CategoryID;
                 _categoriasView.Nombre = entidad.CategoryName;
                 _categoriasView.Descripcion = entidad.Description;
-
                 return View(_categoriasView);
             }
             catch (Exception)
