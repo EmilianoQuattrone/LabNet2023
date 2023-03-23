@@ -16,8 +16,15 @@ namespace Lab.EF.MVC.Controllers
 
         public ActionResult ObtenerCategorias()
         {
-            List<CategoriasDto> categoriasLogicaLista = _categoriasLogica.ObtenerTodos();
-            return View(categoriasLogicaLista);
+            try
+            {
+                List<CategoriasDto> categoriasLogicaLista = _categoriasLogica.ObtenerTodos();
+                return View(categoriasLogicaLista);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("ErrorVista","Error");
+            }
         }
 
         public ActionResult Insertar()
@@ -37,10 +44,13 @@ namespace Lab.EF.MVC.Controllers
             try
             {
                 Categories entidad = _categoriasLogica.ObtenerUno(id);
-                _categoriasView.Id = entidad.CategoryID;
-                _categoriasView.Nombre = entidad.CategoryName;
-                _categoriasView.Descripcion = entidad.Description;
-                return View("InsertarModificarCategoria", _categoriasView);
+                CategoriasView view = new CategoriasView()
+                {
+                    Id = entidad.CategoryID,
+                    Nombre = entidad.CategoryName,
+                    Descripcion = entidad.Description
+                };
+                return View("InsertarModificarCategoria", view);
             }
             catch (Exception)
             {
@@ -90,11 +100,14 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                var entidad = _categoriasLogica.ObtenerUno(id);
-                _categoriasView.Id = entidad.CategoryID;
-                _categoriasView.Nombre = entidad.CategoryName;
-                _categoriasView.Descripcion = entidad.Description;
-                return View(_categoriasView);
+                Categories entidad = _categoriasLogica.ObtenerUno(id);
+                CategoriasView view = new CategoriasView()
+                {
+                    Id = entidad.CategoryID,
+                    Nombre = entidad.CategoryName,
+                    Descripcion = entidad.Description
+                };
+                return View(view);
             }
             catch (Exception)
             {

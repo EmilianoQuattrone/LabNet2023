@@ -1,11 +1,14 @@
 ﻿@model Lab.EF.MVC.Models.CategoriasView
+@{
+    ViewBag.Title = "Formulario de Categoria";
+}
 
 <h1>Formulario de Categoria</h1>
 
 @using (Html.BeginForm("InsertarModificarCategoria", "Categorias", FormMethod.Post))
- {
+{
 
-        @Html.HiddenFor(c => c.Id)
+    @Html.HiddenFor(c => c.Id)
 
     <div class="form-group">
         @Html.LabelFor(c => c.Nombre)
@@ -18,8 +21,8 @@
         @Html.TextBoxFor(c => c.Descripcion, new { @class = "form-control" })
         @Html.ValidationMessageFor(c => c.Descripcion, "", new { @class = "text-danger" })
     </div>
-        <br />
-     <input class="btn btn-primary" type="submit" value="Aceptar" />
-     <input class="btn btn-danger" type="button" value="Cancelar"
-            onclick="location.href='@Url.Action("VolverPaginaPrincipal","Categorias")'" />
- }
+    <br />
+    <input class="btn btn-primary" type="submit" value="Aceptar" />
+    <input class="btn btn-danger" type="button" value="Cancelar"
+           onclick="location.href='@Url.Action("VolverPaginaPrincipal","Categorias")'" />
+}
