@@ -190,6 +190,8 @@
     <Content Include="Views\Error\ErrorVista.cshtml" />
     <Content Include="Views\Categorias\EliminarCategoria.cshtml" />
     <Content Include="Views\Categorias\InsertarModificarCategoria.cshtml" />
+    <Content Include="Views\Error\EliminarSinPermiso.cshtml" />
+    <Content Include="Views\Error\UrlConLetras.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

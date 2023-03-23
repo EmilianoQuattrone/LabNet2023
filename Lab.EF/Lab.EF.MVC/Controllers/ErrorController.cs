@@ -12,5 +12,15 @@ namespace Lab.EF.MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult EliminarSinPermiso() 
+        {
+            return View();
+        }
+
+        public ActionResult UrlConLetras()
+        {
+            return View();
+        }
     }
 }

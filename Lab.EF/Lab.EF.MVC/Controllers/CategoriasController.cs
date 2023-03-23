@@ -4,6 +4,7 @@ using Lab.EF.Logica.Categorias;
 using Lab.EF.MVC.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Web.Mvc;
 
 namespace Lab.EF.MVC.Controllers
@@ -109,6 +110,10 @@ namespace Lab.EF.MVC.Controllers
                 };
                 return View(view);
             }
+            catch (DbUpdateException)
+            {
+                return RedirectToAction("EliminarSinPermiso", "Error");
+            }
             catch (Exception)
             {
                 return RedirectToAction("ErrorVista", "Error");
@@ -122,6 +127,10 @@ namespace Lab.EF.MVC.Controllers
             {              
                 _categoriasLogica.Eliminar(categoriasView.Id);
                 return RedirectToAction("ObtenerCategorias");
+            }
+            catch (DbUpdateException)
+            {
+                return RedirectToAction("EliminarSinPermiso", "Error");
             }
             catch (Exception)
             {
