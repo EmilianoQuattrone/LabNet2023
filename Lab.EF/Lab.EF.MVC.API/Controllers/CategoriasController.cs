@@ -31,16 +31,33 @@ namespace Lab.EF.MVC.API.Controllers
             return _categoriasView;
         }
 
-        public void Post([FromBody] string value)
+        public void Post([FromBody] CategoriasView categoriasView)
         {
+            CategoriasDto categoriasDto = new CategoriasDto()
+            {
+                Nombre = categoriasView.Nombre,
+                Descripcion = categoriasView.Descripcion
+            };
+            _categoriasLogica.Add(categoriasDto);
         }
 
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] CategoriasView categoriasView)
         {
+            if (id == categoriasView.Id)
+            {
+                CategoriasDto categoriasDto = new CategoriasDto()
+                {
+                    Id = categoriasView.Id,
+                    Nombre = categoriasView.Nombre,
+                    Descripcion = categoriasView.Descripcion
+                };
+                _categoriasLogica.Modificar(categoriasDto);
+            }
         }
 
         public void Delete(int id)
         {
+            _categoriasLogica.Eliminar(id);
         }
     }
 }

@@ -318,9 +318,9 @@
       <Project>{C2C273FA-9654-4886-96A7-C3C05D165331}</Project>
       <Name>Lab.EF.Logica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lab.EF.MVC\Lab.EF.MVC.csproj">
+    <ProjectReference Include="..\Lab.EF.MVC\Lab.EF.MVC.ApiPublica.csproj">
       <Project>{515fc860-1d1b-411f-991f-3b00e2497a73}</Project>
-      <Name>Lab.EF.MVC</Name>
+      <Name>Lab.EF.MVC.ApiPublica</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

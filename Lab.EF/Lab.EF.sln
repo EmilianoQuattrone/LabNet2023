@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.Data", "Lab.EF.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.LogicaTests", "Lab.EF.LogicaTests\Lab.EF.LogicaTests.csproj", "{C9D644A7-FDB3-40C2-B0CD-AE440CE41842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.MVC", "Lab.EF.MVC\Lab.EF.MVC.csproj", "{515FC860-1D1B-411F-991F-3B00E2497A73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.MVC.ApiPublica", "Lab.EF.MVC\Lab.EF.MVC.ApiPublica.csproj", "{515FC860-1D1B-411F-991F-3B00E2497A73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.MVC.API", "Lab.EF.MVC.API\Lab.EF.MVC.API.csproj", "{5CF92A24-CA2F-4932-927E-6E8431468096}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.MVC.WebApi", "Lab.EF.MVC.API\Lab.EF.MVC.WebApi.csproj", "{5CF92A24-CA2F-4932-927E-6E8431468096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
