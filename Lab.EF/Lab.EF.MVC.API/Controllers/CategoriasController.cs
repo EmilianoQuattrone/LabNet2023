@@ -3,12 +3,7 @@ using Lab.EF.Logica;
 using Lab.EF.Logica.Categorias;
 using Lab.EF.MVC.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.UI.WebControls;
 
 namespace Lab.EF.MVC.API.Controllers
 {
@@ -50,12 +45,19 @@ namespace Lab.EF.MVC.API.Controllers
         {
             try
             {
-                _categoriasDto.Nombre = categoriasView.Nombre;
-                _categoriasDto.Descripcion = categoriasView.Descripcion;
-
-                _categoriasLogica.Add(_categoriasDto);
-                //id devuelve 0 por que es un insertar
-                return CreatedAtRoute("DefaultApi", new { id = categoriasView }, categoriasView);
+                if (ModelState.IsValid)
+                {
+                    _categoriasDto.Nombre = categoriasView.Nombre;
+                    _categoriasDto.Descripcion = categoriasView.Descripcion;
+                    _categoriasLogica.Add(_categoriasDto);
+                    //id devuelve 0 por que es un insertar
+                    return CreatedAtRoute("DefaultApi", new { id = categoriasView }, 
+                        categoriasView);
+                }
+                else
+                {
+                    return BadRequest(ModelState);
+                }
             }
             catch (Exception)
             {
@@ -67,16 +69,23 @@ namespace Lab.EF.MVC.API.Controllers
         {
             try
             {
-                Categories categories = _categoriasLogica.ObtenerUno(id);
-                if (categories.CategoryID == categoriasView.Id)
+                if (ModelState.IsValid)
                 {
-                    _categoriasDto.Id = categoriasView.Id;
-                    _categoriasDto.Nombre = categoriasView.Nombre;
-                    _categoriasDto.Descripcion = categoriasView.Descripcion;
+                    Categories categories = _categoriasLogica.ObtenerUno(id);
+                    if (categories.CategoryID == categoriasView.Id)
+                    {
+                        _categoriasDto.Id = categoriasView.Id;
+                        _categoriasDto.Nombre = categoriasView.Nombre;
+                        _categoriasDto.Descripcion = categoriasView.Descripcion;
 
-                    _categoriasLogica.Modificar(_categoriasDto);
+                        _categoriasLogica.Modificar(_categoriasDto);
+                    }
+                    return Ok(_categoriasDto);
                 }
-                return Ok(_categoriasDto);
+                else
+                {
+                    return BadRequest(ModelState);
+                }
             }
             catch (Exception)
             {
