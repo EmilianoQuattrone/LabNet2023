@@ -89,7 +89,7 @@ namespace Lab.EF.MVC.API.Controllers
             }
             catch (Exception)
             {
-                return BadRequest("No existe un ese id");
+                return BadRequest("No existe id");
             }
         }
 
