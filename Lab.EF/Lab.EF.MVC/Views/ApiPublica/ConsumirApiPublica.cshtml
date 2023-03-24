@@ -1,4 +1,4 @@
-﻿@model Lab.EF.MVC.API.Models.UsuariosView[]
+﻿@model Lab.EF.MVC.Models.UsuariosView[]
 @{
     ViewBag.Title = "Listado de Usuarios";
 }
@@ -11,7 +11,7 @@
             <td scope="col">Nombre</td>
             <td scope="col">Usuario</td>
             <td scope="col">Email</td>
-            <td scope="col">Direccione</td>
+            <td scope="col">Direccion</td>
             <td scope="col">Cuidad</td>
             <td scope="col">Calle</td>
             <td scope="col">Telefono</td>
@@ -26,8 +26,8 @@
             <td>@item.Email</td>
             <td>@item.Address</td>
             <td>@item.Address.City</td>
-            <td>@item.Address.Street</td>
-            <td>@item.Phone.</td>
+            <td>@item.Address.Suite</td>
+            <td>@item.Phone</td>
             <td>@item.WebSite</td>
         </tr>
     }

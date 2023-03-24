@@ -6,12 +6,10 @@ using System.Web.Mvc;
 
 namespace Lab.EF.MVC.API.Controllers
 {
-    public class HomeController : Controller
+    public class HomeApiController : Controller
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
         }
     }

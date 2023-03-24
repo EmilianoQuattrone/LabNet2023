@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApiPublicaController.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -133,6 +134,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CategoriasView.cs" />
+    <Compile Include="Models\UsuariosView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +194,7 @@
     <Content Include="Views\Categorias\InsertarModificarCategoria.cshtml" />
     <Content Include="Views\Error\EliminarSinPermiso.cshtml" />
     <Content Include="Views\Error\UrlConLetras.cshtml" />
+    <Content Include="Views\ApiPublica\ConsumirApiPublica.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

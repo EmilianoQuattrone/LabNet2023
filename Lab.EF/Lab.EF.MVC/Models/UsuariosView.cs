@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Lab.EF.MVC.API.Models
+namespace Lab.EF.MVC.Models
 {
     public class UsuariosView
     {
@@ -15,7 +15,6 @@ namespace Lab.EF.MVC.API.Models
         public string Phone { get; set; }
         public string WebSite { get; set; }
     }
-
     public class AddressView
     {
         public string Street { get; set; }
@@ -24,7 +23,6 @@ namespace Lab.EF.MVC.API.Models
         public string Zipcode { get; set; }
         public GeoView Geo { get; set; }
     }
-
     public class GeoView
     {
         public string Lat { get; set; }

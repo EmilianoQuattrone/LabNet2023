@@ -1,4 +1,4 @@
-﻿using Lab.EF.MVC.API.Models;
+﻿using Lab.EF.MVC.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Lab.EF.MVC.API.Controllers
+namespace Lab.EF.MVC.Controllers
 {
     public class ApiPublicaController : Controller
     {
