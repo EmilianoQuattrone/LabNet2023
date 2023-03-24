@@ -12,15 +12,15 @@ namespace Lab.EF.MVC.API.Controllers
 {
     public class ApiPublicaController : Controller
     {
-        public string url = "https://jsonplaceholder.typicode.com/users";
+        private readonly string url = "https://jsonplaceholder.typicode.com/users";
+        private HttpClient httpClient = new HttpClient();
+
         // GET: ApiPublica
         public async Task<ActionResult> ConsumirApiPublica()
         {
-            var httpClient = new HttpClient();
-            //json de momento devuelve un string por el metodo
             var respuesta = await httpClient.GetStringAsync(url);
-            var modelo = JsonConvert.DeserializeObject<UsuariosView[]>(respuesta);
-            return View(modelo);
+            var usuariosView = JsonConvert.DeserializeObject<UsuariosView[]>(respuesta);
+            return View(usuariosView);
         }
     }
 }
