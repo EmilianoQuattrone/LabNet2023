@@ -16,6 +16,7 @@ namespace Lab.EF.MVC.API.Controllers
     {
         private CategoriasLogica _categoriasLogica = new CategoriasLogica();
         private CategoriasView _categoriasView = new CategoriasView();
+        private CategoriasDto _categoriasDto = new CategoriasDto();
 
         public IHttpActionResult Get()
         {
@@ -49,39 +50,52 @@ namespace Lab.EF.MVC.API.Controllers
         {
             try
             {
-                CategoriasDto categoriasDto = new CategoriasDto()
-                {
-                    Nombre = categoriasView.Nombre,
-                    Descripcion = categoriasView.Descripcion
-                };
-                _categoriasLogica.Add(categoriasDto);
+                _categoriasDto.Nombre = categoriasView.Nombre;
+                _categoriasDto.Descripcion = categoriasView.Descripcion;
+
+                _categoriasLogica.Add(_categoriasDto);
                 //id devuelve 0 por que es un insertar
                 return CreatedAtRoute("DefaultApi", new { id = categoriasView }, categoriasView);
             }
             catch (Exception)
             {
-
                 return BadRequest("No se puedo insertar la categoria.");
             }
         }
 
-        public void Put(int id, [FromBody] CategoriasView categoriasView)
+        public IHttpActionResult Put(int id, [FromBody] CategoriasView categoriasView)
         {
-            if (id == categoriasView.Id)
+            try
             {
-                CategoriasDto categoriasDto = new CategoriasDto()
+                Categories categories = _categoriasLogica.ObtenerUno(id);
+                if (categories.CategoryID == categoriasView.Id)
                 {
-                    Id = categoriasView.Id,
-                    Nombre = categoriasView.Nombre,
-                    Descripcion = categoriasView.Descripcion
-                };
-                _categoriasLogica.Modificar(categoriasDto);
+                    _categoriasDto.Id = categoriasView.Id;
+                    _categoriasDto.Nombre = categoriasView.Nombre;
+                    _categoriasDto.Descripcion = categoriasView.Descripcion;
+
+                    _categoriasLogica.Modificar(_categoriasDto);
+                }
+                return Ok(_categoriasDto);
+            }
+            catch (Exception)
+            {
+                return BadRequest("No existe un ese id");
             }
         }
 
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
-            _categoriasLogica.Eliminar(id);
+            try
+            {
+                Categories categories = _categoriasLogica.ObtenerUno(id);
+                _categoriasLogica.Eliminar(categories.CategoryID);
+                return Ok(categories.CategoryID);
+            }
+            catch (Exception)
+            {
+                return BadRequest("El id no existe");
+            }
         }
     }
 }
