@@ -1,0 +1,13 @@
+﻿@model Lab.EF.MVC.API.Models.UsuariosView[]
+@{
+    ViewBag.Title = "Consumir Api Publica";
+}
+
+<h2>Consumir Api Publica</h2>
+
+<ul>
+    @foreach (var item in Model)
+	{
+        <li>@item.Email</li>
+	}
+</ul>

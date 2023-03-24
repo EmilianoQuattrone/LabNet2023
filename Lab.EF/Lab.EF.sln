@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.LogicaTests", "Lab.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.MVC", "Lab.EF.MVC\Lab.EF.MVC.csproj", "{515FC860-1D1B-411F-991F-3B00E2497A73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.EF.MVC.API", "Lab.EF.MVC.API\Lab.EF.MVC.API.csproj", "{5CF92A24-CA2F-4932-927E-6E8431468096}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{515FC860-1D1B-411F-991F-3B00E2497A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{515FC860-1D1B-411F-991F-3B00E2497A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{515FC860-1D1B-411F-991F-3B00E2497A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF92A24-CA2F-4932-927E-6E8431468096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF92A24-CA2F-4932-927E-6E8431468096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF92A24-CA2F-4932-927E-6E8431468096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF92A24-CA2F-4932-927E-6E8431468096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
