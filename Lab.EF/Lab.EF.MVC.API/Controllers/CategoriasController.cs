@@ -17,28 +17,52 @@ namespace Lab.EF.MVC.API.Controllers
         private CategoriasLogica _categoriasLogica = new CategoriasLogica();
         private CategoriasView _categoriasView = new CategoriasView();
 
-        public IEnumerable<CategoriasDto> Get()
+        public IHttpActionResult Get()
         {
-            return _categoriasLogica.ObtenerTodos();
-        }
-
-        public CategoriasView Get(int id)
-        {
-            Categories categories = _categoriasLogica.ObtenerUno(id);
-            _categoriasView.Id = categories.CategoryID;
-            _categoriasView.Nombre = categories.CategoryName;
-            _categoriasView.Descripcion = categories.Description;
-            return _categoriasView;
-        }
-
-        public void Post([FromBody] CategoriasView categoriasView)
-        {
-            CategoriasDto categoriasDto = new CategoriasDto()
+            try
             {
-                Nombre = categoriasView.Nombre,
-                Descripcion = categoriasView.Descripcion
-            };
-            _categoriasLogica.Add(categoriasDto);
+                return Ok(_categoriasLogica.ObtenerTodos());
+            }
+            catch (Exception)
+            {
+                return BadRequest("No se pudo obtener las Categorias");
+            }
+        }
+
+        public IHttpActionResult Get(int id)
+        {
+            try
+            {
+                Categories categories = _categoriasLogica.ObtenerUno(id);
+                _categoriasView.Id = categories.CategoryID;
+                _categoriasView.Nombre = categories.CategoryName;
+                _categoriasView.Descripcion = categories.Description;
+                return Ok(_categoriasView);
+            }
+            catch (Exception)
+            {
+                return BadRequest("No existe una categoria con ese Id.");
+            }
+        }
+
+        public IHttpActionResult Post([FromBody] CategoriasView categoriasView)
+        {
+            try
+            {
+                CategoriasDto categoriasDto = new CategoriasDto()
+                {
+                    Nombre = categoriasView.Nombre,
+                    Descripcion = categoriasView.Descripcion
+                };
+                _categoriasLogica.Add(categoriasDto);
+                //id devuelve 0 por que es un insertar
+                return CreatedAtRoute("DefaultApi", new { id = categoriasView }, categoriasView);
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("No se puedo insertar la categoria.");
+            }
         }
 
         public void Put(int id, [FromBody] CategoriasView categoriasView)
