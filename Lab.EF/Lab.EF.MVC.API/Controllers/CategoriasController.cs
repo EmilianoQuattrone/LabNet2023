@@ -99,7 +99,7 @@ namespace Lab.EF.MVC.API.Controllers
             {
                 Categories categories = _categoriasLogica.ObtenerUno(id);
                 _categoriasLogica.Eliminar(categories.CategoryID);
-                return Ok(categories.CategoryID);
+                return Ok("La categoria se elimino.");
             }
             catch (Exception)
             {
