@@ -4,14 +4,17 @@ using Lab.EF.Logica.Categorias;
 using Lab.EF.MVC.Models;
 using System;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Lab.EF.MVC.API.Controllers
 {
+    [EnableCors("*","*","*")]
     public class CategoriasController : System.Web.Http.ApiController
     {
         private CategoriasLogica _categoriasLogica = new CategoriasLogica();
         private CategoriasView _categoriasView = new CategoriasView();
         private CategoriasDto _categoriasDto = new CategoriasDto();
+
 
         public IHttpActionResult Get()
         {
