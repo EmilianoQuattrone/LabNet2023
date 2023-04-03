@@ -1,0 +1,17 @@
+.titulo {
+    background: red;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.botonVolver {
+    display: flex;
+    justify-content: center;
+}
+
+.volver {
+    background: green;
+    color: white;
+}

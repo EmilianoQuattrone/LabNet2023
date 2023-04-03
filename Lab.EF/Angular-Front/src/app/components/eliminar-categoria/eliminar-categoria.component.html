@@ -1,0 +1,26 @@
+<div>
+    <h1 class="titulo">Eliminar Categoria</h1>
+</div>
+<div class="formulario" *ngIf=" formularioEliminar != null">
+    <mat-card>
+        <form id="formulario">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input type="text" disabled="true" matInput value="{{formularioEliminar.Nombre}}">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input type="text" disabled="true" matInput value="{{formularioEliminar.Descripcion}}">
+            </mat-form-field>
+            <div class="botones">
+                <button (click)="eliminarCategoria()" type="submit" matTooltip="Eliminar" mat-button class="done">
+                    <mat-icon mat-icon-font>done</mat-icon>
+                </button>
+                <button matTooltip="Volver" routerLink="/listadoCategorias" mat-button class="reply">
+                    <mat-icon mat-icon-font>reply</mat-icon>
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,42 @@
+<div>
+    <h1 class="titulo">{{titulo}} Categoria</h1>
+</div>
+<div class="formulario">
+    <mat-card>
+        <form id="formulario" [formGroup]="formulario" (ngSubmit)="agregarEditarCategoria()">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input type="text" formControlName="inputCategoria" matInput placeholder="Categoria" maxlength="15">
+
+                <div *ngIf="formulario.get('inputCategoria')?.hasError('required') 
+                    && formulario.get('inputCategoria')?.touched">
+                    <strong>El campo es requerido.</strong>
+                </div>
+
+                <div *ngIf=" formulario.get('inputCategoria')?.hasError('pattern') 
+                    && formulario.get('inputCategoria')?.touched">
+                    <strong>El campo solo puede contener letras.</strong>
+                </div>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input type="text" formControlName="inputDescripcion" matInput>
+
+                <div *ngIf=" formulario.get('inputCategoria')?.hasError('pattern') 
+                && formulario.get('inputCategoria')?.touched">
+                    <strong>El campo solo puede contener letras.</strong>
+                </div>
+
+            </mat-form-field>
+            <div class="botones">
+                <button type="submit" matTooltip="Guardar" mat-button class="done">
+                    <mat-icon mat-icon-font>done</mat-icon>
+                </button>
+                <button matTooltip="Volver" routerLink="/listadoCategorias" mat-button class="reply">
+                    <mat-icon mat-icon-font>reply</mat-icon>
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

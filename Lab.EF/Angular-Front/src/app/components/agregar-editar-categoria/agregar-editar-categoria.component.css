@@ -1,0 +1,28 @@
+.titulo {
+    background: grey;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.done {
+    background: green;
+    color: white;
+    margin-right: 20px;
+}
+
+.reply {
+    background: red;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+}
+
+.botones {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+}
+
+th {
+    background: #6DD5FA;
+    font-size: 20px;
+    color: black;
+    font-family: cursive;
+}
+
+td {
+
+    font-size: 17px;
+    font-family: initial;
+}
+
+.titulo {
+    background: grey;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.insertar {
+    cursor: pointer;
+    color: white;
+    background: green;
+    float: right;
+}
+
+.editar {
+    cursor: pointer;
+    color: blue;
+    margin-left: 45px;
+}
+
+.eliminar {
+
+    cursor: pointer;
+    color: red;
+}
